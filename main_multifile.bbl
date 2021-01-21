@@ -1,0 +1,163 @@
+\begin{thebibliography}{\bstlabelmark}
+\interlinepenalty=10000
+\setlength{\itemsep}{0bp}\setlength{\parskip}{0pt}\small
+\bibitem{sculley2007relaxed} D.~Sculley, G.~M. Wachman. Relaxed online svms for
+  spam filtering[C]. Proceedings of the 30th annual international ACM SIGIR
+  conference on Research and development in information retrieval, 2007,
+  415-422
+\bibitem{saif2016contextual} H.~Saif, Y.~He, M.~Fernandez, et~al. Contextual
+  semantics for sentiment analysis of twitter[J]. Information Processing \&
+  Management, 2016, 52(1): 5-19
+\bibitem{xu2018powerful} K.~Xu, W.~Hu, J.~Leskovec, et~al. How powerful are
+  graph neural networks?[J]. arXiv preprint arXiv:1810.00826, 2018
+\bibitem{cai2018comprehensive} H.~Cai, V.~W. Zheng, K.~C.-C. Chang. A
+  comprehensive survey of graph embedding: Problems, techniques, and
+  applications[J]. IEEE Transactions on Knowledge and Data Engineering, 2018,
+  30(9): 1616-1637
+\bibitem{wu2020comprehensive} Z.~Wu, S.~Pan, F.~Chen, et~al. A comprehensive
+  survey on graph neural networks[J]. IEEE Transactions on Neural Networks and
+  Learning Systems, 2020
+\bibitem{zhou2018graph} J.~Zhou, G.~Cui, Z.~Zhang, et~al. Graph neural
+  networks: A review of methods and applications[J]. arXiv preprint
+  arXiv:1812.08434, 2018
+\bibitem{li2015gated} Y.~Li, D.~Tarlow, M.~Brockschmidt, et~al. Gated graph
+  sequence neural networks[J]. arXiv preprint arXiv:1511.05493, 2015
+\bibitem{velivckovic2017graph} P.~Veli{\v{c}}kovi{\'c}, G.~Cucurull,
+  A.~Casanova, et~al. Graph attention networks[J]. arXiv preprint
+  arXiv:1710.10903, 2017
+\bibitem{kipf2016semi} T.~N. Kipf, M.~Welling. Semi-supervised classification
+  with graph convolutional networks[J]. arXiv preprint arXiv:1609.02907, 2016
+\bibitem{jones1972statistical} K.~S. Jones. A statistical interpretation of
+  term specificity and its application in retrieval[J]. Journal of
+  documentation, 1972
+\bibitem{mikolov2013efficient} T.~Mikolov, K.~Chen, G.~Corrado, et~al.
+  Efficient estimation of word representations in vector space[J]. arXiv
+  preprint arXiv:1301.3781, 2013
+\bibitem{mikolov2013distributed} T.~Mikolov, I.~Sutskever, K.~Chen, et~al.
+  Distributed representations of words and phrases and their
+  compositionality[J]. Advances in neural information processing systems, 2013,
+  26: 3111-3119
+\bibitem{pennington2014glove} J.~Pennington, R.~Socher, C.~D. Manning. Glove:
+  Global vectors for word representation[C]. Proceedings of the 2014 conference
+  on empirical methods in natural language processing (EMNLP), 2014, 1532-1543
+\bibitem{joulin2016bag} A.~Joulin, E.~Grave, P.~Bojanowski, et~al. Bag of
+  tricks for efficient text classification[J]. arXiv preprint arXiv:1607.01759,
+  2016
+\bibitem{salehinejad2017recent} H.~Salehinejad, S.~Sankar, J.~Barfett, et~al.
+  Recent advances in recurrent neural networks[J]. arXiv preprint
+  arXiv:1801.01078, 2017
+\bibitem{hochreiter1997long} S.~Hochreiter, J.~Schmidhuber. Long short-term
+  memory[J]. Neural computation, 1997, 9(8): 1735-1780
+\bibitem{cho2014learning} K.~Cho, B.~Van~Merri{\"e}nboer, C.~Gulcehre, et~al.
+  Learning phrase representations using rnn encoder-decoder for statistical
+  machine translation[J]. arXiv preprint arXiv:1406.1078, 2014
+\bibitem{schuster1997bidirectional} M.~Schuster, K.~K. Paliwal. Bidirectional
+  recurrent neural networks[J]. IEEE transactions on Signal Processing, 1997,
+  45(11): 2673-2681
+\bibitem{kim2014convolutional} Y.~Kim. Convolutional neural networks for
+  sentence classification[J]. arXiv preprint arXiv:1408.5882, 2014
+\bibitem{lai2015recurrent} S.~Lai, L.~Xu, K.~Liu, et~al. Recurrent
+  convolutional neural networks for text classification[C]. Proceedings of the
+  Twenty-Ninth AAAI Conference on Artificial Intelligence, 2015, 2267-2273
+\bibitem{wang2018disconnected} B.~Wang. Disconnected recurrent neural networks
+  for text categorization[C]. Proceedings of the 56th Annual Meeting of the
+  Association for Computational Linguistics (Volume 1: Long Papers), 2018,
+  2311-2320
+\bibitem{mou2014tbcnn} L.~Mou, G.~Li, Z.~Jin, et~al. Tbcnn: A tree-based
+  convolutional neural network for programming language processing[J]. arXiv
+  preprint arXiv:1409.5718, 2014
+\bibitem{yao2019graph} L.~Yao, C.~Mao, Y.~Luo. Graph convolutional networks for
+  text classification[C]. Proceedings of the AAAI Conference on Artificial
+  Intelligence, 2019, 7370-7377
+\bibitem{vaswani2017attention} A.~Vaswani, N.~Shazeer, N.~Parmar, et~al.
+  Attention is all you need[C]. Advances in neural information processing
+  systems, 2017, 5998-6008
+\bibitem{devlin2018bert} J.~Devlin, M.-W. Chang, K.~Lee, et~al. Bert:
+  Pre-training of deep bidirectional transformers for language
+  understanding[J]. arXiv preprint arXiv:1810.04805, 2018
+\bibitem{jiang2011target} L.~Jiang, M.~Yu, M.~Zhou, et~al. Target-dependent
+  twitter sentiment classification[C]. Proceedings of the 49th annual meeting
+  of the association for computational linguistics: human language
+  technologies, 2011, 151-160
+\bibitem{wagner2014dcu} J.~Wagner, P.~Arora, S.~Cortes, et~al. Dcu:
+  Aspect-based polarity classification for semeval task 4[J]. SemEval 2014,
+  2014, 223
+\bibitem{brychcin2014uwb} T.~Brychc{\'\i}n, M.~Konkol, J.~Steinberger. Uwb:
+  Machine learning approach to aspect-based sentiment analysis[C]. Proceedings
+  of the 8th International Workshop on Semantic Evaluation (SemEval 2014),
+  2014, 817-822
+\bibitem{tang2015effective} D.~Tang, B.~Qin, X.~Feng, et~al. Effective lstms
+  for target-dependent sentiment classification[J]. arXiv preprint
+  arXiv:1512.01100, 2015
+\bibitem{xue2018aspect} W.~Xue, T.~Li. Aspect based sentiment analysis with
+  gated convolutional networks[J]. arXiv preprint arXiv:1805.07043, 2018
+\bibitem{huang2019parameterized} B.~Huang, K.~M. Carley. Parameterized
+  convolutional neural networks for aspect level sentiment classification[J].
+  arXiv preprint arXiv:1909.06276, 2019
+\bibitem{han2019multi} H.~Han, X.~Li, S.~Zhi, et~al. Multi-attention network
+  for aspect sentiment analysis[C]. Proceedings of the 2019 8th International
+  Conference on Software and Computer Applications, 2019, 22-26
+\bibitem{li2019co} H.~Li, Y.~Xue, H.~Zhao, et~al. Co-attention networks for
+  aspect-level sentiment analysis[C]. CCF International Conference on Natural
+  Language Processing and Chinese Computing, 2019, 200-209
+\bibitem{huang2018aspect} B.~Huang, Y.~Ou, K.~M. Carley. Aspect level sentiment
+  classification with attention-over-attention neural networks[C].
+  International Conference on Social Computing, Behavioral-Cultural Modeling
+  and Prediction and Behavior Representation in Modeling and Simulation, 2018,
+  197-206
+\bibitem{zhang2019aspect} C.~Zhang, Q.~Li, D.~Song. Aspect-based sentiment
+  classification with aspect-specific graph convolutional networks[J]. arXiv
+  preprint arXiv:1909.03477, 2019
+\bibitem{tang2020dependency} H.~Tang, D.~Ji, C.~Li, et~al. Dependency graph
+  enhanced dual-transformer structure for aspect-based sentiment
+  classification[C]. Proceedings of the 58th Annual Meeting of the Association
+  for Computational Linguistics, 2020, 6578-6588
+\bibitem{hinton1986learning} G.~E. Hinton, et~al. Learning distributed
+  representations of concepts[C]. Proceedings of the eighth annual conference
+  of the cognitive science society, 1986, 12
+\bibitem{hamilton2017representation} W.~L. Hamilton, R.~Ying, J.~Leskovec.
+  Representation learning on graphs: Methods and applications[J]. arXiv
+  preprint arXiv:1709.05584, 2017
+\bibitem{scarselli2008graph} F.~Scarselli, M.~Gori, A.~C. Tsoi, et~al. The
+  graph neural network model[J]. IEEE Transactions on Neural Networks, 2008,
+  20(1): 61-80
+\bibitem{battaglia2016interaction} P.~W. Battaglia, R.~Pascanu, M.~Lai, et~al.
+  Interaction networks for learning about objects, relations and physics[J].
+  arXiv preprint arXiv:1612.00222, 2016
+\bibitem{zhang2018end} M.~Zhang, Z.~Cui, M.~Neumann, et~al. An end-to-end deep
+  learning architecture for graph classification[C]. Proceedings of the AAAI
+  Conference on Artificial Intelligence, 2018, 332
+\bibitem{bahdanau2014neural} D.~Bahdanau, K.~Cho, Y.~Bengio. Neural machine
+  translation by jointly learning to align and translate[J]. arXiv preprint
+  arXiv:1409.0473, 2014
+\bibitem{luong2015effective} M.-T. Luong, H.~Pham, C.~D. Manning. Effective
+  approaches to attention-based neural machine translation[J]. arXiv preprint
+  arXiv:1508.04025, 2015
+\bibitem{lin2017structured} Z.~Lin, M.~Feng, C.~N.~d. Santos, et~al. A
+  structured self-attentive sentence embedding[J]. arXiv preprint
+  arXiv:1703.03130, 2017
+\bibitem{fukushima1982neocognitron} K.~Fukushima, S.~Miyake. Neocognitron: A
+  self-organizing neural network model for a mechanism of visual pattern
+  recognition[M]. Springer, 1982, 267-285
+\bibitem{krizhevsky2017imagenet} A.~Krizhevsky, I.~Sutskever, G.~E. Hinton.
+  Imagenet classification with deep convolutional neural networks[J].
+  Communications of the ACM, 2017, 60(6): 84-90
+\bibitem{wu2019} Z.~Wu, S.~Pan, F.~Chen, et~al. A comprehensive survey on graph
+  neural networks[J]. arXiv preprint arXiv:1901.00596, 2019
+\bibitem{pang2005seeing} B.~Pang, L.~Lee. Seeing stars: Exploiting class
+  relationships for sentiment categorization with respect to rating scales[J].
+  arXiv preprint cs/0506075, 2005
+\bibitem{tang2015pte} J.~Tang, M.~Qu, Q.~Mei. Pte: Predictive text embedding
+  through large-scale heterogeneous text networks[C]. Proceedings of the 21th
+  ACM SIGKDD International Conference on Knowledge Discovery and Data Mining,
+  2015, 1165-1174
+\bibitem{yang2016hierarchical} Z.~Yang, D.~Yang, C.~Dyer, et~al. Hierarchical
+  attention networks for document classification[C]. Proceedings of the 2016
+  conference of the North American chapter of the association for computational
+  linguistics: human language technologies, 2016, 1480-1489
+\bibitem{2014Adam} D.~Kingma, J.~Ba. Adam: A method for stochastic
+  optimization[J]. Computer Science, 2014
+\bibitem{2014Dropout} N.~Srivastava, G.~Hinton, A.~Krizhevsky, et~al. Dropout:
+  A simple way to prevent neural networks from overfitting[J]. Journal of
+  Machine Learning Research, 2014, 15(1): 1929-1958
+\end{thebibliography}

@@ -302,12 +302,125 @@ Glove词向量作为单词的初始化向量。所涉及的比较方法均属于
 LSTM每一个循环中，对于输入的单词向量均会产生一个隐藏向量表示，本章中将这些生成的单词的隐藏向量表示做一个平均池化作为文本的向量，
 用于实现文本分类任务。
 
-\textbf{Bi-LSTM：}\citing{schuster1997bidirectional} 是一种双向的LSTM模型。它将一个句子从前到后进行处理，同时对句子从后到前进行编码，最后将
+\textbf{Bi-LSTM}\citing{schuster1997bidirectional}: 是一种双向的LSTM模型。它将一个句子从前到后进行处理，同时对句子从后到前进行编码，最后将
 两种信息拼接起来。相比于LSTM多了一个从后到前的信息，这样的设计有利于模型进行更细粒度的理解，更好的捕捉双向的语义依赖。本章中采用LSTM获取文本
 向量的方式，对通过前向LSTM获得到的文本向量以及从后向LSTM获取的到的文本向量进行拼接，作为最终的文本向量表示，以用于分类任务。
 
-\textbf{TextGCN：}
-\subsection{模型训练及参数设置}
-\subsection{实验评价指标}
+\textbf{TextGCN：}TextGCN\citing{yao2019graph}将单词和文档视作图中的节点，通过GCN进行半监督学习单词节点和文档节点的向量表示，这些节点使用one-hot向量进行初始化。
+学习到的文档节点表示即可直接用于实现文本分类任务。
 
+\textbf{TextCNN：}本章采用由\citing{kim2014convolutional}提出的CNN处理文本的方法。对比实验采用一维卷积，对于卷积后的特征值采用最大池化的方式
+挑选最重要的特征值。多个卷积核生成多个卷积池化后的特征，将这些特征拼接作为文本向量表示，实现文本分类任务。
+
+\textbf{RCNN：}Lai\citing{lai2015recurrent}等人提出一种将循环神经网络与卷积神经网络中的特点相结合的方法。它首先通过RNN网络获取文本信息，然后采用CNN中的
+池化操作提取这些信息中的重要部分。最终获得表示文本的向量，用以实现文本分类任务。
+
+\textbf{MLP：}作为最基本的神经网络对比方法，本章中将一个文本中的所有词向量进行拼接，然后将获得的向量输入一个仅包含输入层、隐藏层和输出层的神经网络实现文本分类任务。
+
+\textbf{HAN：}Hierarchical Attention Networks\citing{yang2016hierarchical}是一种结合了双向RNN和注意力机制的神经网络模型。这个模型关注单词之间的关系，同时也关注句子段与句子段的关系。
+即它将一个句子分为多段，在每一段中首先将单词输入双向RNN网络中获得每个单词的隐藏向量表示，之后采用注意力机制将这些单词向量进行加权和获得当前句子段的向量表示。对每一个句子段均采用
+这种方式学习向量表示。多个句子段获得多个向量表示，再采用双向RNN网络学习这些向量的新的向量表示，最后将这些学到的句子段向量表示使用注意力机制结合成一个单一的向量，用以表示文本的向量，用作文本分类任务。
+
+\textbf{TextGraph-CNN：}本章提出的方法主要结合了超结点的向量以及CNN提取的向量，因作为对比验证，仅使用CNN提取后的特征向量作为最终的文本向量表示，用以分类，不再结合超结点的向量。
+
+\textbf{TextGraph-HN：}与TextGraph-CNN类似，作为对比，仅使用超结点向量作为文本向量表示。
+\subsection{模型训练及验证}
+对于所有的对比方法以及本章提出的方法均使用来自于GLove的300维预训练单词向量作为初始化，同时均采用相同预处理方式得到的文本数据集。
+均采用Adam\citing{2014Adam}优化器对模型进行训练更新权重，且所有模型的学习率都设置为0.001。所有模型都采用相同的超参数，即使用相同大小的隐藏层神经元，本章中均设置为128。对于HAN网络，
+本章中设置将一个句子划分为3段。对于TextGraph模型，本章将单词建模过程中的窗口大小设置为4，GCN网络层数为2，采用的CNN网络中的卷积核大小与对比方法textCNN中采用的
+卷积核一致，均使用3，4，5大小的卷积核，同时每种大小的卷积核都有128个。所有模型训练中都采用dropout\citing{2014Dropout}值为0.5防止网络训练过程中的过拟合问题。
+
+为了测试模型之间的性能，所有数据集均划分为训练集和测试集，模型在训练集上进行训练，在测试集上进行验证。
+
+为了验证模型对于随机初始化向量的学习能力，即在不依赖预训练单词向量的前提下，是否依然具有良好的分类性能。实验中不采用Glove方法中获取得到预训练向量，而是采用
+高斯分布随机生成300维的向量用做单词向量的初始化。所有模型在训练集中通过反向传播更新单词向量表示，测试时直接采用训练过程中学到的单词向量表示作为输入进行验证。
+
+为验证模型在少量训练集的情况下的学习能力，本章中采用挑选R8数据集中的部分训练集数据作为模型训练的数据。挑选比例分别设置为2.5\%，5\%，7.5\%，10\%，12.5\%，即训练样本数
+分别为137，274，411，548，685，其余所有的数据集则作为测试集验证模型的分类性能指标。
+
+模型分类性能影响可能来至于学习到的向量表示之间是否有较为分明的界限，因此本章中挑选R8数据集文本向量学习结果，采用2维的t-SNE方法实现可视化。本章对比了LSTM模型和textGraph之间的
+可视化差异。
+\subsection{实验评价指标}
+因为文本分类主要是多分类任务，本章中主要采用准确率（accuracy）和macro-F1分数来验证模型的分类性能。
+对于了解这些评价指标首先得了解TP（True Positive ）、TN（True Negative）、FP（False Positive）、FN（False Negative）。
+
+\textbf{TP：}即真实的正样本。
+
+\textbf{TN：}即真实的负样本。
+
+\textbf{FP：}即假的的正样本。
+
+\textbf{FN：}即假的的负样本。
+
+因此对于二分类的准确率（accuracy）计算如公式\ref{acc}所示。
+\begin{equation}\label{acc}
+    accuracy=\frac{TP+TN}{TP+TN+FP+FN}
+\end{equation}
+
+由于本章涉及的均为多分类，因此准确率（accuracy）计算方式可以归纳为如公式\ref{accM}所示，$T$表示为所有预测正确的样本数，$F$表示为所有预测错误的样本数。
+\begin{equation}\label{accM}
+    accuracy=\frac{T}{T+F}
+\end{equation}
+
+另外精确率（Precision）P和召回率（Recall）R的计算方式分别为公式\ref{PRE}、公式\ref{RECALL}所示。
+\begin{equation}\label{PRE}
+    Precision=\frac{TP}{TP+FP}
+\end{equation}
+\begin{equation}\label{RECALL}
+    Recall=\frac{TP}{TP+TN}
+\end{equation}
+而计算macro-F1分数需要由macro-Precision和macro-Recall得到，计算方式如公式\ref{mPRE}、公式\ref{mrec}、公式\ref{mf1}所示，
+其中$P_i$，$R_i$分别表示标签$i$的精确率和召回率。
+\begin{equation}\label{mPRE}
+    macro-Precision=\frac{1}{D}\sum_{i}{P_i}
+\end{equation}
+\begin{equation}\label{mrec}
+    macro-Recall=\frac{1}{D}\sum_{i}{R_i}
+\end{equation}
+
+\begin{equation}\label{mf1}
+    macro-F1=\frac{2*macro-Precision * macro-Recall}{macro-Precision + macro-Recall}
+\end{equation}
+
+本章设置的对比实验中均采用准确率（以下简称ACC）和macro-F1分数（以下简称F1-score）这两个指标来进行展示与分析。
 \section{实验结果及分析}
+\subsection{模型分类性能分析}
+本小节主要比较了采用Glove预训练的词向量初始化以及采用随机初始化的模型之间的差异。
+
+如表\ref{tab:acc-result}所示，展示了采用Glove预训练的模型的准确率（ACC）和F1分数（F1-score），可以明显看出本章提出的
+模型在所有数据集上均取得了最优的分类结果。
+
+\begin{table*}[htb]
+    \centering
+    \caption{ 采用预训练词向量下的各模型分类性能比较}
+    \renewcommand\arraystretch{1}
+    \renewcommand\tabcolsep{0.7mm}
+    \label{tab:acc-result}
+    \arrayrulecolor{black}
+    \begin{tabular}{lcccccccc}
+    \hline
+    \multirow{2}{*}{\textbf{Models}} & \multicolumn{2}{c}{\textbf{MR}} & \multicolumn{2}{c}{\textbf{R52}} & \multicolumn{2}{c}{\textbf{R8}} & \multicolumn{2}{c}{\textbf{Yelp}}  \\
+    \cline{2-9}
+                            & ACC   & F1-score       & ACC   & F1-score        & ACC   & F1-score       & ACC   & F1-score          \\
+    \hline
+    TextGCN                 & 76.74 & 76.72         & 93.56 & 65.51          & 97.07 & 92.41         & -     & -                 \\
+    TextCNN                 & 78.16 & 78.16         & 93.90  & 67.37          & 97.24 & 92.57         & 51.52 & 45.15            \\
+    HAN                     & 77.78 & 77.67         & \underline{94.64} & \underline{74.62}          & 97.15 & 93.62         & 53.51 & 48.91            \\
+    LSTM                    & 78.06 & 77.99         & 91.86 & 64.32          & 96.66 & 89.58         & \underline{54.88} & \underline{51.67}            \\
+    Bi-LSTM                 & \underline{78.55} & \underline{78.55}         & 93.22 & 64.95          & 96.71 & 91.79         & 54.08 & 49.92            \\
+    RCNN                   & 78.09 & 78.04         & 93.55 & 65.27          & \underline{97.65} & \underline{94.64}          & 53.57 & 47.97            \\
+    MLP                     & 72.22 & 72.19         & 86.48 & 37.90           & 95.61 & 83.39         & 46.60  & 39.52            \\
+    \hline
+    \textbf{TextGraph}                   & \textbf{80.19} & \textbf{80.19}         & \textbf{95.33} & \textbf{78.55}          & \textbf{98.03} & \textbf{95.48}         & \textbf{55.31} & \textbf{51.80}            \\
+    \hline
+    \end{tabular}
+    \arrayrulecolor{black}
+    \end{table*}
+
+对于MR数据集来说，本章提出的放在无论在ACC上还是F1-score上均表现了最优的结果，而作为对比方法Bi-LSTM展现了出除本章提出的算法外
+最好的效果。分析来看，主要是MR数据集是属于情感分析类数据集，分类标签与情感相关，因此文本中的词序对情感分类具有较大的影响，尤其是一个
+单词的情感语义既有可能受前面的单词影响，也有可能受后面单词的影响。而Bi-LSTM采用一个前向的LSTM以及一个后向的LSTM分别捕获单词之间前后的依赖关系，
+因此对于同样采用了双向RNN结构的RCNN来说，分类效果也不错。但是HAN却低了一截，主要原因可能是HAN将一个句子分为多段，对于MR数据集来说，其句子平均长度
+相对较短，仅只有20.39，因此在短句子情况下进行分段可能会影响模型性能。本章的提出的方法，在构建图的过程中采用了前后单词权重不同的方式构图，即双向边根据
+单词出现的前后关系具有不同大小的权重，在一定程度上考虑的单词之间的先后顺序，因此该算法展现了一定的效果。而对于textGCN来说，其完全忽略了单词之间的顺序，
+因此效果较差，没有在MR数据集上取得好的分类性能。
