@@ -42,10 +42,12 @@
 \BOOKMARK [2][-]{subsection.3.4.4}{3.4.4 实验评价指标}{section.3.4}% 42
 \BOOKMARK [1][-]{section.3.5}{3.5 实验结果及分析}{chapter.3}% 43
 \BOOKMARK [2][-]{subsection.3.5.1}{3.5.1 模型分类性能分析}{section.3.5}% 44
-\BOOKMARK [0][-]{chapter*.26}{致 谢}{}% 45
-\BOOKMARK [0][-]{appendix.A}{附录A 中心极限定理的证明}{}% 46
-\BOOKMARK [1][-]{section.A.1}{A.1 高斯分布和伯努利实验}{appendix.A}% 47
-\BOOKMARK [0][-]{appendix*.27}{参考文献}{}% 48
-\BOOKMARK [0][-]{appendix*.28}{攻读硕士学位期间取得的成果}{}% 49
-\BOOKMARK [0][-]{appendix*.29}{外文资料原文}{}% 50
-\BOOKMARK [0][-]{appendix*.30}{外文资料译文}{}% 51
+\BOOKMARK [2][-]{subsection.3.5.2}{3.5.2 训练集比例的影响}{section.3.5}% 45
+\BOOKMARK [2][-]{subsection.3.5.3}{3.5.3 文本向量可视化分析}{section.3.5}% 46
+\BOOKMARK [0][-]{chapter*.28}{致 谢}{}% 47
+\BOOKMARK [0][-]{appendix.A}{附录A 中心极限定理的证明}{}% 48
+\BOOKMARK [1][-]{section.A.1}{A.1 高斯分布和伯努利实验}{appendix.A}% 49
+\BOOKMARK [0][-]{appendix*.29}{参考文献}{}% 50
+\BOOKMARK [0][-]{appendix*.30}{攻读硕士学位期间取得的成果}{}% 51
+\BOOKMARK [0][-]{appendix*.31}{外文资料原文}{}% 52
+\BOOKMARK [0][-]{appendix*.32}{外文资料译文}{}% 53

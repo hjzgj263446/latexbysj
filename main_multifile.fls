@@ -395,6 +395,8 @@ INPUT e:/software_install/latex/texlive/texlive/2020/texmf-dist/fonts/tfm/public
 INPUT e:/software_install/latex/texlive/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT e:/software_install/latex/texlive/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT pic/cnnslide.png
+INPUT pic/R8_acc.pdf
+INPUT pic/R8_f1-score.pdf
 INPUT misc/acknowledgement.tex
 INPUT misc/acknowledgement.tex
 INPUT misc/appendix.tex

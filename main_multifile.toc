@@ -83,25 +83,29 @@
 \contentsline {section}{\numberline {3.5}实验结果及分析}{34}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}模型分类性能分析}{34}{subsection.3.5.1}%
  \cftsetpnumwidth {\widthof {35}-1pt} 
-\setcounter {tocdepth}{0}
  \cftsetpnumwidth {\widthof {36}-1pt} 
-\contentsline {chapter}{致\hspace {12pt}谢}{36}{chapter*.26}%
  \cftsetpnumwidth {\widthof {37}-1pt} 
-\setcounter {tocdepth}{2}
-\contentsline {chapter}{\numberline {附录A}中心极限定理的证明}{37}{appendix.A}%
-\contentsline {section}{\numberline {A.1}高斯分布和伯努利实验}{37}{section.A.1}%
+\contentsline {subsection}{\numberline {3.5.2}训练集比例的影响}{37}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}文本向量可视化分析}{37}{subsection.3.5.3}%
+\setcounter {tocdepth}{0}
  \cftsetpnumwidth {\widthof {38}-1pt} 
-\contentsline {chapter}{参考文献}{38}{appendix*.27}%
+\contentsline {chapter}{致\hspace {12pt}谢}{38}{chapter*.28}%
  \cftsetpnumwidth {\widthof {39}-1pt} 
+\setcounter {tocdepth}{2}
+\contentsline {chapter}{\numberline {附录A}中心极限定理的证明}{39}{appendix.A}%
+\contentsline {section}{\numberline {A.1}高斯分布和伯努利实验}{39}{section.A.1}%
  \cftsetpnumwidth {\widthof {40}-1pt} 
+\contentsline {chapter}{参考文献}{40}{appendix*.29}%
  \cftsetpnumwidth {\widthof {41}-1pt} 
  \cftsetpnumwidth {\widthof {42}-1pt} 
-\contentsline {chapter}{攻读硕士{}学位期间取得的成果}{42}{appendix*.28}%
  \cftsetpnumwidth {\widthof {43}-1pt} 
-\setcounter {tocdepth}{0}
-\contentsline {chapter}{外文资料原文}{43}{appendix*.29}%
-\contentsline {section}{\numberline {1}The OFDM Model of Multiple Carrier Waves}{43}{section.A.1}%
-\setcounter {tocdepth}{0}
  \cftsetpnumwidth {\widthof {44}-1pt} 
-\contentsline {chapter}{外文资料译文}{44}{appendix*.30}%
-\contentsline {section}{\numberline {1}基于多载波索引键控的正交频分多路复用系统模型}{44}{section.A.1}%
+\contentsline {chapter}{攻读硕士{}学位期间取得的成果}{44}{appendix*.30}%
+ \cftsetpnumwidth {\widthof {45}-1pt} 
+\setcounter {tocdepth}{0}
+\contentsline {chapter}{外文资料原文}{45}{appendix*.31}%
+\contentsline {section}{\numberline {1}The OFDM Model of Multiple Carrier Waves}{45}{section.A.1}%
+\setcounter {tocdepth}{0}
+ \cftsetpnumwidth {\widthof {46}-1pt} 
+\contentsline {chapter}{外文资料译文}{46}{appendix*.32}%
+\contentsline {section}{\numberline {1}基于多载波索引键控的正交频分多路复用系统模型}{46}{section.A.1}%

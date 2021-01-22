@@ -1,28 +1,28 @@
 # Fdb version 3
-["bibtex accomplish"] 1611217901 "accomplish.aux" "accomplish.bbl" "accomplish" 1611221601
+["bibtex accomplish"] 1611305865 "accomplish.aux" "accomplish.bbl" "accomplish" 1611306802
   "./thesis-uestc.bst" 1610349624 9229 2adcad16b822634c0c8d0325eedc87a5 ""
-  "accomplish.aux" 1611221594 85 e2bfe95702fbb7aed191a39418c68d31 "xelatex"
+  "accomplish.aux" 1611306793 85 e2bfe95702fbb7aed191a39418c68d31 "xelatex"
   "publications.bib" 1610521715 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
-  "accomplish.blg"
   "accomplish.bbl"
-["bibtex main_multifile"] 1611221560 "main_multifile.aux" "main_multifile.bbl" "main_multifile" 1611221601
+  "accomplish.blg"
+["bibtex main_multifile"] 1611306787 "main_multifile.aux" "main_multifile.bbl" "main_multifile" 1611306802
   "./thesis-uestc.bst" 1610349624 9229 2adcad16b822634c0c8d0325eedc87a5 ""
-  "main_multifile.aux" 1611221594 28944 6b21d3a5ebeb6819c737661b9bcb8d0d "xelatex"
+  "main_multifile.aux" 1611306793 30459 50fb02402ec174bfaa421488d5916910 "xelatex"
   "reference.bib" 1611215962 14849 724757db90062036cc3f0319ee20effb ""
   (generated)
-  "main_multifile.blg"
   "main_multifile.bbl"
-["xdvipdfmx"] 1611221596 "main_multifile.xdv" "main_multifile.pdf" "main_multifile" 1611221601
-  "main_multifile.xdv" 1611221594 731224 1144e1534e27a35e5c023c8b1d29ef1c "xelatex"
+  "main_multifile.blg"
+["xdvipdfmx"] 1611306797 "main_multifile.xdv" "main_multifile.pdf" "main_multifile" 1611306802
+  "main_multifile.xdv" 1611306793 786548 0738492e157cc9143b6deeb1aedf3002 "xelatex"
   (generated)
   "main_multifile.pdf"
-["xelatex"] 1611221589 "d:/tjj/±œ…Ë/latex/latexbysj/main_multifile.tex" "main_multifile.xdv" "main_multifile" 1611221601
-  "accomplish.aux" 1611221594 85 e2bfe95702fbb7aed191a39418c68d31 "xelatex"
-  "accomplish.bbl" 1611217902 142 f389a4d8575a25e287596ed2c34854e0 "bibtex accomplish"
+["xelatex"] 1611306789 "d:/tjj/±œ…Ë/latex/latexbysj/main_multifile.tex" "main_multifile.xdv" "main_multifile" 1611306802
+  "accomplish.aux" 1611306793 85 e2bfe95702fbb7aed191a39418c68d31 "xelatex"
+  "accomplish.bbl" 1611305866 142 f389a4d8575a25e287596ed2c34854e0 "bibtex accomplish"
   "chapter/c1_exordium.tex" 1610954840 18818 7b4ad769accdd18817b29f31520293c0 ""
   "chapter/c2.tex" 1611130713 25882 9050a29340b058f3a68ebc354f483f7d ""
-  "chapter/c3.tex" 1611221583 35194 fce253867939b3beec9f108b3bd2fec8 ""
+  "chapter/c3.tex" 1611306761 44998 06f63ea1b5284182eec0c10e9c54ad99 ""
   "d:/tjj/±œ…Ë/latex/latexbysj/main_multifile.tex" 1610953598 1324 fb5f591a2f7d63034208510156e9b4a1 ""
   "e:/software_install/latex/texlive/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1610442906 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "e:/software_install/latex/texlive/texlive/2020/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1610445940 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -205,10 +205,10 @@
   "e:/software_install/latex/texlive/texlive/2020/texmf-dist/web2c/texmf.cnf" 1610443681 39451 60d7debd9ef8ece44cbe965493576c2d ""
   "e:/software_install/latex/texlive/texlive/2020/texmf-var/web2c/xetex/xelatex.fmt" 1610447181 4769754 bfebdeb315500e9ea4d8c40fc189dcc1 ""
   "e:/software_install/latex/texlive/texlive/2020/texmf.cnf" 1610446935 673 2e5aa3ac564c6f70f54d6752d765c05d ""
-  "main_multifile.aux" 1611221594 28944 6b21d3a5ebeb6819c737661b9bcb8d0d "xelatex"
-  "main_multifile.bbl" 1611221561 10148 855c4af6edd2ba802b51894393c58791 "bibtex main_multifile"
-  "main_multifile.out" 1611221594 3748 d0d53e75c5c31512fe7d6db9a0d26838 "xelatex"
-  "main_multifile.toc" 1611221594 6489 e86e2fb62c01772e8c491e9682e86d64 "xelatex"
+  "main_multifile.aux" 1611306793 30459 50fb02402ec174bfaa421488d5916910 "xelatex"
+  "main_multifile.bbl" 1611306788 10148 855c4af6edd2ba802b51894393c58791 "bibtex main_multifile"
+  "main_multifile.out" 1611306793 3919 87f99ff22b8db9384b5e25261c0a7436 "xelatex"
+  "main_multifile.toc" 1611306793 6760 f8a1cfee35e4453b0480f2fd44361197 "xelatex"
   "misc/acknowledgement.tex" 1610349722 94 bfa964c9359c5d068744883425b6fb11 ""
   "misc/appendix.tex" 1610349722 97 f2b3f25be25a0642414321161d380c7f ""
   "misc/chinese_abstract.tex" 1610349722 581 f3923f34e22099f0bebbfad39536a07c ""
@@ -232,6 +232,8 @@
   "pic/2-7.jpg" 1610610526 50850 ef3f228452fbdf82031d64de5034da1c ""
   "pic/2-8.jpg" 1610610540 56331 727edb08173f46c3d00472e577ff5f94 ""
   "pic/2-9.png" 1610611019 1175505 44bc85714afa9c01cdf27e71f19f13c4 ""
+  "pic/R8_acc.pdf" 1610957218 11095 2b6d8d50ddb941280b9288c7f9631fca ""
+  "pic/R8_f1-score.pdf" 1610957224 11607 ad9174d501ff56f64445e85fa1ec6d06 ""
   "pic/TextGraph-arch.pdf" 1610957238 49456 f6659279b2adba90404b857edee5914a ""
   "pic/cnnslide.png" 1611124500 14266 028f89054065c54c7db83febf7f08cc0 ""
   "pic/logo.pdf" 1610349711 379576 7e126e7b491bb646692399cea219f487 ""
@@ -240,8 +242,8 @@
   "thesis-uestc.cls" 1610349624 33971 12f0ca1a331ce85b3798b4155479516b ""
   (generated)
   "main_multifile.xdv"
-  "main_multifile.log"
-  "main_multifile.aux"
   "main_multifile.toc"
-  "accomplish.aux"
+  "main_multifile.log"
   "main_multifile.out"
+  "main_multifile.aux"
+  "accomplish.aux"

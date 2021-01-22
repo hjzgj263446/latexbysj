@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.12)  21 JAN 2021 17:33
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.12)  22 JAN 2021 17:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1260,35 +1260,59 @@ Missing character: There is no ） in font rm-lmr12!
  [25] [26]
 File: pic/cnnslide.png Graphic file (type bmp)
 <pic/cnnslide.png>
- [27] [28] [29] [30] [31] [32] [33]) [34] (./misc/acknowledgement.tex [35]) (./misc/appendix.tex [36
+ [27] [28] [29] [30] [31] [32] [33] [34] [35]
+
+LaTeX Warning: Reference `accOfCNNHN' on page 36 undefined on input line 477.
+
+[36]
+File: pic/R8_acc.pdf Graphic file (type pdf)
+<use pic/R8_acc.pdf>
+
+Overfull \hbox (85.69785pt too wide) in paragraph at lines 497--497
+[] [] 
+ []
+
+File: pic/R8_f1-score.pdf Graphic file (type pdf)
+<use pic/R8_f1-score.pdf>
+
+Overfull \hbox (85.69785pt too wide) in paragraph at lines 504--504
+[] [] 
+ []
+
+
+Overfull \hbox (14.0pt too wide) in paragraph at lines 494--507
+[][]  [] 
+ []
+
+) (./misc/acknowledgement.tex [37]) (./misc/appendix.tex [38
 
 ]
 附录 附录A.
-) (./main_multifile.bbl [37
+) (./main_multifile.bbl [39
 
-] [38
+] [40
 
 ]
 Underfull \hbox (badness 7613) in paragraph at lines 57--59
 []\TU/TimesNewRoman(0)/m/n/10.5 Y. Kim. Convolutional neural networks for sentence classification[J]. arXiv preprint
  []
 
-[39]
+[41]
 Underfull \hbox (badness 1406) in paragraph at lines 103--108
 \TU/TimesNewRoman(0)/m/n/10.5 attention neural networks[C]. International Conference on Social Computing, Behavioral-
  []
 
-[40]) (./accomplish.bbl [41]
+[42]) (./accomplish.bbl [43]
 
 LaTeX Warning: Empty `thebibliography' environment on input line 4.
 
-) (./misc/translate_original.tex [42
+) (./misc/translate_original.tex [44
 
-]) (./misc/translate_chinese.tex [43
+]) (./misc/translate_chinese.tex [45
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 60.
- [44
+ [46
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 60.
@@ -1296,7 +1320,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 60.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 60.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 60.
 Package rerunfilecheck Info: File `main_multifile.out' has not changed.
-(rerunfilecheck)             Checksum: D0D53E75C5C31512FE7D6DB9A0D26838;3748.
+(rerunfilecheck)             Checksum: 87F99FF22B8DB9384B5E25261C0A7436;3919.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1309,12 +1333,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 25773 strings out of 479418
- 493134 string characters out of 5874465
- 890900 words of memory out of 5000000
- 42674 multiletter control sequences out of 15000+600000
+ 25789 strings out of 479418
+ 493430 string characters out of 5874465
+ 891221 words of memory out of 5000000
+ 42688 multiletter control sequences out of 15000+600000
  562593 words of font info for 134 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  59i,13n,88p,1053b,550s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main_multifile.xdv (53 pages, 731224 bytes).
+Output written on main_multifile.xdv (55 pages, 786548 bytes).
