@@ -1,46 +1,48 @@
-This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
+This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main_multifile.aux
+Reallocating 'name_of_file' (item size: 1) to 13 items.
 The style file: thesis-uestc.bst
+Reallocating 'name_of_file' (item size: 1) to 10 items.
 Database file #1: reference.bib
-You've used 52 entries,
+You've used 60 entries,
             929 wiz_defined-function locations,
-            532 strings with 11933 characters,
-and the built_in function-call counts, 10905 in all, are:
-= -- 664
-> -- 620
+            581 strings with 14131 characters,
+and the built_in function-call counts, 13612 in all, are:
+= -- 862
+> -- 740
 < -- 0
-+ -- 332
-- -- 168
-* -- 838
-:= -- 1531
++ -- 403
+- -- 200
+* -- 1053
+:= -- 1913
 add.period$ -- 0
-call.type$ -- 52
-change.case$ -- 52
+call.type$ -- 60
+change.case$ -- 60
 chr.to.int$ -- 0
-cite$ -- 52
-duplicate$ -- 593
-empty$ -- 644
-format.name$ -- 217
-if$ -- 2041
+cite$ -- 60
+duplicate$ -- 721
+empty$ -- 834
+format.name$ -- 257
+if$ -- 2566
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 333
-newline$ -- 56
-num.names$ -- 52
-pop$ -- 300
+missing$ -- 390
+newline$ -- 64
+num.names$ -- 60
+pop$ -- 356
 preamble$ -- 0
 purify$ -- 0
 quote$ -- 0
-skip$ -- 216
+skip$ -- 259
 stack$ -- 0
-substring$ -- 1172
-swap$ -- 336
+substring$ -- 1591
+swap$ -- 400
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 156
+while$ -- 196
 width$ -- 0
-write$ -- 480
+write$ -- 567

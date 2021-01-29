@@ -160,4 +160,33 @@
 \bibitem{2014Dropout} N.~Srivastava, G.~Hinton, A.~Krizhevsky, et~al. Dropout:
   A simple way to prevent neural networks from overfitting[J]. Journal of
   Machine Learning Research, 2014, 15(1): 1929-1958
+\bibitem{zhou2019deep} J.~Zhou, J.~X. Huang, Q.~Chen, et~al. Deep learning for
+  aspect-level sentiment classification: Survey, vision, and challenges[J].
+  IEEE access, 2019, 7: 78454-78483
+\bibitem{li2018transformation} X.~Li, L.~Bing, W.~Lam, et~al. Transformation
+  networks for target-oriented sentiment classification[C]. Proceedings of the
+  56th Annual Meeting of the Association for Computational Linguistics (Volume
+  1: Long Papers), 2018, 946-956
+\bibitem{wang2016attention} Y.~Wang, M.~Huang, X.~Zhu, et~al. Attention-based
+  lstm for aspect-level sentiment classification[C]. Proceedings of the 2016
+  conference on empirical methods in natural language processing, 2016, 606-615
+\bibitem{2018arXiv180603536X} K.~{Xu}, C.~{Li}, Y.~{Tian}, et~al.
+  {Representation Learning on Graphs with Jumping Knowledge Networks}[J]. arXiv
+  e-prints, 2018, arXiv:1806.03536
+\bibitem{Li_2019_ICCV} G.~Li, M.~Muller, A.~Thabet, et~al. Deepgcns: Can gcns
+  go as deep as cnns?[C]. Proceedings of the IEEE/CVF International Conference
+  on Computer Vision (ICCV), 2019, 9267-9276
+\bibitem{dong-etal-2014-adaptive} L.~Dong, F.~Wei, C.~Tan, et~al. Adaptive
+  recursive neural network for target-dependent {T}witter sentiment
+  classification[C]. Proceedings of the 52nd Annual Meeting of the Association
+  for Computational Linguistics (Volume 2: Short Papers), Baltimore, Maryland,
+  2014, 49-54
+\bibitem{pontiki-etal-2014-semeval} M.~Pontiki, D.~Galanis, J.~Pavlopoulos,
+  et~al. {S}em{E}val-2014 task 4: Aspect based sentiment analysis[C].
+  Proceedings of the 8th International Workshop on Semantic Evaluation
+  ({S}em{E}val 2014), Dublin, Ireland, 2014, 27-35
+\bibitem{pontiki-etal-2015-semeval} M.~Pontiki, D.~Galanis, H.~Papageorgiou,
+  et~al. {S}em{E}val-2015 task 12: Aspect based sentiment analysis[C].
+  Proceedings of the 9th International Workshop on Semantic Evaluation
+  ({S}em{E}val 2015), Denver, Colorado, 2015, 486-495
 \end{thebibliography}

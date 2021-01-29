@@ -160,7 +160,7 @@ Kipf提出的图卷积神经网络\ref{kipf2016semi}是一种直接在图上进�
 	a_i = score(q,k_i)
 \end{equation}
 \begin{equation}\label{attFormula2}
-	\alpha_i = \frac{a_i}{\sum_{j}a_j}
+	\alpha_i = \frac{exp(a_i)}{\sum_{j}exp(a_j)}
 \end{equation}
 \begin{equation}\label{attFormula3}
 	c=\sum_{j}v_j* \alpha_j
