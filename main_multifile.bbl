@@ -189,4 +189,17 @@
   et~al. {S}em{E}val-2015 task 12: Aspect based sentiment analysis[C].
   Proceedings of the 9th International Workshop on Semantic Evaluation
   ({S}em{E}val 2015), Denver, Colorado, 2015, 486-495
+\bibitem{Kiritchenko-svm} S.~Kiritchenko, X.~Zhu, C.~Cherry, et~al.
+  Nrc-canada-2014: Detecting aspects and sentiment in customer reviews[C].
+  Proceedings of the 8th International Workshop on Semantic Evaluation (SemEval
+  2014), 2014, 437-442
+\bibitem{tang-etal-2016-aspect} D.~Tang, B.~Qin, T.~Liu. Aspect level sentiment
+  classification with deep memory network[C]. Proceedings of the 2016
+  Conference on Empirical Methods in Natural Language Processing, Austin,
+  Texas, 2016, 214-224
+\bibitem{Ma2017Interactive} D.~Ma, S.~Li, X.~Zhang, et~al. Interactive
+  attention networks for aspect-level sentiment classification[C]. Twenty-Sixth
+  International Joint Conference on Artificial Intelligence, 2017, 4068-4074
+\bibitem{Gao2019Target} Z.~Gao, A.~Feng, X.~Song, et~al. Target-dependent
+  sentiment classification with bert[J]. IEEE Access, 2019, 7: 154290-154299
 \end{thebibliography}

@@ -4,6 +4,8 @@
  \cftsetpnumwidth {\widthof {II}-1pt} 
  \cftsetpnumwidth {\widthof {III}-1pt} 
  \cftsetpnumwidth {\widthof {IV}-1pt} 
+ \cftsetpnumwidth {\widthof {V}-1pt} 
+ \cftsetpnumwidth {\widthof {VI}-1pt} 
  \cftsetpnumwidth {\widthof {1}-1pt} 
 \setcounter {tocdepth}{2}
 \contentsline {chapter}{\numberline {第一章}绪\hspace {6pt}论}{1}{chapter.1}%
@@ -85,8 +87,8 @@
 \contentsline {subsection}{\numberline {3.5.2}训练集比例的影响}{37}{subsection.3.5.2}%
  \cftsetpnumwidth {\widthof {38}-1pt} 
 \contentsline {subsection}{\numberline {3.5.3}文本向量可视化分析}{38}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}本章小结}{38}{subsection.3.5.4}%
  \cftsetpnumwidth {\widthof {39}-1pt} 
+\contentsline {subsection}{\numberline {3.5.4}本章小结}{39}{subsection.3.5.4}%
  \cftsetpnumwidth {\widthof {40}-1pt} 
 \contentsline {chapter}{\numberline {第四章}基于图模型的方面级情感分析算法}{40}{chapter.4}%
 \contentsline {section}{\numberline {4.1}引言}{40}{section.4.1}%
@@ -106,26 +108,38 @@
 \contentsline {section}{\numberline {4.4}实验设置}{47}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}数据集描述及数据处理}{47}{subsection.4.4.1}%
  \cftsetpnumwidth {\widthof {48}-1pt} 
-\setcounter {tocdepth}{0}
  \cftsetpnumwidth {\widthof {49}-1pt} 
-\contentsline {chapter}{致\hspace {12pt}谢}{49}{chapter*.33}%
+\contentsline {subsection}{\numberline {4.4.2}对比方法介绍}{49}{subsection.4.4.2}%
  \cftsetpnumwidth {\widthof {50}-1pt} 
-\setcounter {tocdepth}{2}
-\contentsline {chapter}{\numberline {附录A}中心极限定理的证明}{50}{appendix.A}%
-\contentsline {section}{\numberline {A.1}高斯分布和伯努利实验}{50}{section.A.1}%
+\contentsline {subsection}{\numberline {4.4.3}模型参数设置及评价指标}{50}{subsection.4.4.3}%
  \cftsetpnumwidth {\widthof {51}-1pt} 
-\contentsline {chapter}{参考文献}{51}{appendix*.34}%
+\contentsline {section}{\numberline {4.5}实验结果及分析}{51}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}模型分类性能分析}{51}{subsection.4.5.1}%
  \cftsetpnumwidth {\widthof {52}-1pt} 
  \cftsetpnumwidth {\widthof {53}-1pt} 
+\contentsline {subsection}{\numberline {4.5.2}GAGCN中使用的GCN与普通GCN对比}{53}{subsection.4.5.2}%
  \cftsetpnumwidth {\widthof {54}-1pt} 
+\contentsline {subsection}{\numberline {4.5.3}数据增扩效果验证}{54}{subsection.4.5.3}%
+\setcounter {tocdepth}{0}
  \cftsetpnumwidth {\widthof {55}-1pt} 
+\contentsline {chapter}{致\hspace {12pt}谢}{55}{chapter*.39}%
  \cftsetpnumwidth {\widthof {56}-1pt} 
-\contentsline {chapter}{攻读硕士{}学位期间取得的成果}{56}{appendix*.35}%
+\setcounter {tocdepth}{2}
+\contentsline {chapter}{\numberline {附录A}中心极限定理的证明}{56}{appendix.A}%
+\contentsline {section}{\numberline {A.1}高斯分布和伯努利实验}{56}{section.A.1}%
  \cftsetpnumwidth {\widthof {57}-1pt} 
-\setcounter {tocdepth}{0}
-\contentsline {chapter}{外文资料原文}{57}{appendix*.36}%
-\contentsline {section}{\numberline {1}The OFDM Model of Multiple Carrier Waves}{57}{section.A.1}%
-\setcounter {tocdepth}{0}
+\contentsline {chapter}{参考文献}{57}{appendix*.40}%
  \cftsetpnumwidth {\widthof {58}-1pt} 
-\contentsline {chapter}{外文资料译文}{58}{appendix*.37}%
-\contentsline {section}{\numberline {1}基于多载波索引键控的正交频分多路复用系统模型}{58}{section.A.1}%
+ \cftsetpnumwidth {\widthof {59}-1pt} 
+ \cftsetpnumwidth {\widthof {60}-1pt} 
+ \cftsetpnumwidth {\widthof {61}-1pt} 
+ \cftsetpnumwidth {\widthof {62}-1pt} 
+\contentsline {chapter}{攻读硕士{}学位期间取得的成果}{62}{appendix*.41}%
+ \cftsetpnumwidth {\widthof {63}-1pt} 
+\setcounter {tocdepth}{0}
+\contentsline {chapter}{外文资料原文}{63}{appendix*.42}%
+\contentsline {section}{\numberline {1}The OFDM Model of Multiple Carrier Waves}{63}{section.A.1}%
+\setcounter {tocdepth}{0}
+ \cftsetpnumwidth {\widthof {64}-1pt} 
+\contentsline {chapter}{外文资料译文}{64}{appendix*.43}%
+\contentsline {section}{\numberline {1}基于多载波索引键控的正交频分多路复用系统模型}{64}{section.A.1}%

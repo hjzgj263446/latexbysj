@@ -58,10 +58,10 @@
 	\centering
 	\includegraphics[width=1\textwidth]{pic/TextGraph-arch.pdf}
 	\caption{TextGraph模型}
-	\label{textGraph}
+	\label{TextGraph}
 \end{figure}
 
-TextGraph是一个端到端的模型深度学习模型，输入文本数据，输出文本的标签分类。该算法共有三个部分，如图\ref{textGraph}所示，
+TextGraph是一个端到端的模型深度学习模型，输入文本数据，输出文本的标签分类。该算法共有三个部分，如图\ref{TextGraph}所示，
 第一部分定义为文本构图，即通过一些方法，将文本数据转化为图结构，转化为后面算法计算需要的数据。
 第二部分为单词向量表示学习以及CNN网络对文本特征提取，即采用图模型对构成的文本结构图进行学习，获取新的单词向量表示。
 对新的向量表示再采用CNN网络提出文本的特征，主要是局部特征。
@@ -126,15 +126,15 @@ TF\text{-}IDF(i) & \text{当$i$ 是单词, $j$ 是超结点时}\\
 单词的共现信息——通过TF-IDF方法获得到的，因此超结点在GCN网络学习的过程中，会获得整个文本的全局信息，同时这些信息
 也会选择性的传递给所有单词节点，以辅助单词节点学习到更加丰富的表示。同时，采用了注意力机制辅助模型在学习的过程中关注于
 重点信息。即有些单词之间虽然具有边，但是由于这些单词之间关联程度并不高，采用注意力机制有助于降低对不重要信息的关注，
-将更多注意力放在重点的单词节点上进行信息传递。因此对于单词$i$,$j$之间的注意力分数可以通过公式\ref{textGraphAttFor}得到。
-\begin{equation}\label{textGraphAttFor}
+将更多注意力放在重点的单词节点上进行信息传递。因此对于单词$i$,$j$之间的注意力分数可以通过公式\ref{TextGraphAttFor}得到。
+\begin{equation}\label{TextGraphAttFor}
     \gamma_{ij}=sigmoid(x_iW_{a1})+sigmoid(x_jW_{a2})
 \end{equation}
 
 $\gamma_{ij}$即为注意力分数，其中$W_{a1}$和$W_{a2}$为$d\times 1$的权重矩阵，$x_i$,$x_j$为当前单词$i,j$的向量表示，
 为$1\times d$的向量。$sigmoid$为激活函数。加入注意力机制后，与形如公式\ref{GNNFormula1}所示的GCN计算方式略
-有不同，对于每一层的单词向量表示计算可以由公式\ref{textGraphLayerFor},\ref{A_hat},\ref{D_hat}计算得到。
-\begin{equation}\label{textGraphLayerFor}
+有不同，对于每一层的单词向量表示计算可以由公式\ref{TextGraphLayerFor},\ref{A_hat},\ref{D_hat}计算得到。
+\begin{equation}\label{TextGraphLayerFor}
     H^l=\sigma((\gamma ^l\hat{D}^{-\frac{1}{2}}\hat{A}\hat{D}^{-\frac{1}{2}})H^{l-1}W^l)
 \end{equation}
 \begin{equation}\label{A_hat}
@@ -235,7 +235,7 @@ MR数据集中数据如“the cast is phenomenal , especially the women”所示
 \begin{table*}[htb]
 	\centering
 	\caption{数据集数据统计}
-	\setlength{\tabcolsep}{0.7mm}{
+	\setlength{\tabcolsep}{2mm}{
 		\begin{tabular}{c|c|c|c|c|c|c}
 			\hline 
 			{数据集} & {总文本数} & {训练集数}& {测试集数} & {单词数} & {类别数}& {平均长度}  \\
@@ -327,7 +327,7 @@ LSTM每一个循环中，对于输入的单词向量均会产生一个隐藏向�
 \subsection{模型训练及验证}
 对于所有的对比方法以及本章提出的方法均使用来自于GLove的300维预训练单词向量作为初始化，同时均采用相同预处理方式得到的文本数据集。
 均采用Adam\citing{2014Adam}优化器对模型进行训练更新权重，且所有模型的学习率都设置为0.001。所有模型都采用相同的超参数，即使用相同大小的隐藏层神经元，本章中均设置为128。对于HAN网络，
-本章中设置将一个句子划分为3段。对于TextGraph模型，本章将单词建模过程中的窗口大小设置为4，GCN网络层数为2，采用的CNN网络中的卷积核大小与对比方法textCNN中采用的
+本章中设置将一个句子划分为3段。对于TextGraph模型，本章将单词建模过程中的窗口大小设置为4，GCN网络层数为2，采用的CNN网络中的卷积核大小与对比方法TextCNN中采用的
 卷积核一致，均使用3，4，5大小的卷积核，同时每种大小的卷积核都有128个。所有模型训练中都采用dropout\citing{2014Dropout}值为0.5防止网络训练过程中的过拟合问题。
 
 为了测试模型之间的性能，所有数据集均划分为训练集和测试集，模型在训练集上进行训练，在测试集上进行验证。
@@ -338,7 +338,7 @@ LSTM每一个循环中，对于输入的单词向量均会产生一个隐藏向�
 为验证模型在少量训练集的情况下的学习能力，本章中采用挑选R8数据集中的部分训练集数据作为模型训练的数据。挑选比例分别设置为2.5\%，5\%，7.5\%，10\%，12.5\%，即训练样本数
 分别为137，274，411，548，685，其余所有的数据集则作为测试集验证模型的分类性能指标。
 
-模型分类性能影响可能来至于学习到的向量表示之间是否有较为分明的界限，因此本章中挑选R8数据集文本向量学习结果，采用2维的t-SNE方法实现可视化。本章对比了LSTM模型和textGraph之间的
+模型分类性能影响可能来至于学习到的向量表示之间是否有较为分明的界限，因此本章中挑选R8数据集文本向量学习结果，采用2维的t-SNE方法实现可视化。本章对比了LSTM模型和TextGraph之间的
 可视化差异。
 \subsection{实验评价指标}
 因为文本分类主要是多分类任务，本章中主要采用准确率（accuracy）和macro-F1分数来验证模型的分类性能。
@@ -394,7 +394,7 @@ LSTM每一个循环中，对于输入的单词向量均会产生一个隐藏向�
     \centering
     \caption{ 采用预训练词向量下的各模型分类性能比较}
     \renewcommand\arraystretch{1}
-    \renewcommand\tabcolsep{0.7mm}
+    \renewcommand\tabcolsep{2mm}
     \label{tab:acc-result}
     \arrayrulecolor{black}
     \begin{tabular}{lcccccccc}
@@ -431,21 +431,21 @@ LSTM每一个循环中，对于输入的单词向量均会产生一个隐藏向�
 实现对最重要的特征筛选。R52数据集长度适中，且注意力机制依然可以通过模型训练达到对重要信息的关注，因此采用了注意力机制的HAN模型在R52数据集上
 展现了很好的分类性能。本章提出的方法因为使用了窗口滑动的方式实现单词之间边的建立，这样的处理方式类似于CNN卷积窗口，着重关注几个单词之间的联系，
 再加上注意力机制进一步捕捉重点信息，同时该模型最后再次使用了CNN对文本信息中关键特征进行提取，多种操作的结合，使得模型能够关注文本序列中对分类
-有重大帮助的词汇，进而加强分类效果。R8数据集与R52数据集的实验结果类似，在使用了CNN结构或者注意力机制的模型上效果更好，如RCNN，textCNN采用了CNN结构，
+有重大帮助的词汇，进而加强分类效果。R8数据集与R52数据集的实验结果类似，在使用了CNN结构或者注意力机制的模型上效果更好，如RCNN，TextCNN采用了CNN结构，
 HAN模型采用了注意力机制，分类准确率都高于LSTM,Bi-LSTM。由于R8数据集与R52数据集一样，都是来自于路透社的新闻数据，因此具有类似的性质。
 
 在Yelp数据集的实验过程中，由于Yelp数据集单词数以及文档数相对较多，对于textGCN模型方法提供的构图方式需要将所有的单词以及所有的文档都作为
 图中的节点，进而产生的图过于庞大，导致本章使用的服务器无法运行，
 因此对于该方法的实验结果暂无法得到。这也是textGCN的一大缺陷，即当语料库相对较大时便无法运行。对于本章提出的基于GCN的模型，是针对每个文本进行
 构建一个小型的图结构，因此形成的图大小只取决于文本长度而不依赖于语料库大小，相比于textGCN大大降低了计算成本。且可以对新文本实现分类，而textGCN实现分类的
-文本必须提前建立在图结构中，当有新数据到来时无能为力。从实验结果来看textGraph依然取得了最好的分类结果且明显高于其他模型方法。但是LSTM反而取得了
+文本必须提前建立在图结构中，当有新数据到来时无能为力。从实验结果来看TextGraph依然取得了最好的分类结果且明显高于其他模型方法。但是LSTM反而取得了
 其他模型中最优的实验结果。使用了双向LSTM的模型例如HAN、RCNN、Bi-LSTM都不如普通的LSTM效果好，究其原因可能是由于Yelp数据集属于评论数据集，一段文本中
 可能包含了不同的评价，例如数据集中这句话“not too impressed with the food , luckily we were with great friends so we had a fun time”，分类标签为“3”，即
 3分。句子前面的情感色彩为较低，后面的情感色彩偏高，因此从单一方向阅读过去能够分析出中等的评价。虽然双向的LSTM能够捕捉反向的信息，但是也有可能后面的情感色彩
 影响到了模型对前面句子的情感分析，因而双向LSTM分类性能有所降低。
 
 如表\ref{tab:without pre}所示展示了采用高斯分布随机初始化单词向量的分类效果。由于注意力机制需要两个单词向量计算，随机初始化的单词向量会造成一定干扰，因此本表中
-textGraph方法去掉了注意力机制计算权重，其他计算过程一致。从结果上来看，textGraph依然在大多数数据集上取得了最优的效果，结果表明，该方法在学习单词嵌入表示
+TextGraph方法去掉了注意力机制计算权重，其他计算过程一致。从结果上来看，TextGraph依然在大多数数据集上取得了最优的效果，结果表明，该方法在学习单词嵌入表示
 上具有一定优势。与采用预训练单词向量的结果相比，大多数模型在MR数据集上表现并不好，且下降明显。这可能是由于MR数据集训练集文本较短且样本相对较少，而单词数却非常多，
 这就导致了每个单词出现次数较少，模型难以学到优异的单词的向量表示，从而在测试集上效果不突出。
 
@@ -454,7 +454,7 @@ textGraph方法去掉了注意力机制计算权重，其他计算过程一致�
     \caption{随机初始化单词向量各模型性能比较}
     \label{tab:without pre}
     \renewcommand\arraystretch{1}
-    \renewcommand\tabcolsep{0.7mm}
+    \renewcommand\tabcolsep{2mm}
     \begin{tabular}{lcccccccc}
     \hline
     \multirow{2}{*}{\textbf{Models}} & \multicolumn{2}{c}{\textbf{MR}} & \multicolumn{2}{c}{\textbf{R52}} & \multicolumn{2}{c}{\textbf{R8}} & \multicolumn{2}{c}{\textbf{Yelp}}                                \\
@@ -473,20 +473,53 @@ textGraph方法去掉了注意力机制计算权重，其他计算过程一致�
     \end{tabular}
     \end{table*}
 
-为验证textGraph的CNN结构和超结点结构的效果以及两者结合后成效，本章测试了textGraph-CNN和textGraph-HN两种
-结构，前者是仅考虑CNN提取后的文本向量，后者是仅考虑超结点得到的文本向量。如图\ref{accOfCNNHN}所示，主要展示了
-对比方法中最优的分类结果以及本章提出的方法的分类结果。可以看出TextGraph-CNN基本都高于对比方法中最优的模型，且在准确率
-在MR,R52,R8,Yelp数据集上，分别高于textCNN1.3\%，0.8\%，0.34\%和2.97\%。两者方法CNN结构采用相同的参数设置，textGraph明显高于
-textCNN。说明，该模型在学习单词嵌入表示上具有一定优异的能力，能够学到表征能力更强的单词向量，提升模型分类性能。TextGraph-HN在大多数数据集
-上展现与textGraph-CNN差不多的性能，只是在MR数据集上表现更差。两者的结合可以看出效果得到进一步提升。这是由于模型从局部特征以及
+为验证TextGraph的CNN结构和超结点结构的效果以及两者结合后的提升效果，本章测试了TextGraph-CNN和TextGraph-HN两种
+结构在不同数据集情况下的分类性能，前者是仅考虑CNN提取后的文本向量，后者是仅考虑超结点得到的文本向量。如图\ref{MR_acc_f1}、图\ref{R52_acc_f1}
+图\ref{R8_acc_f1}和图\ref{Yelp_acc_f1}所示，主要展示了所有的
+对比方法中最优的分类结果以及本章提出的方法的分类结果。可以看出TextGraph-CNN在大多数数据集下基本都高于对比方法中最优的模型，且在准确率
+在MR,R52,R8,Yelp数据集上，分别高于TextCNN1.3\%，0.8\%，0.34\%和2.97\%。这两者方法中的CNN结构采用相同的参数设置，即相同的卷积核，相同的池化操作，
+TextGraph-CNN明显高于TextCNN。说明，该模型在学习单词嵌入表示上具有一定优异的能力，能够学到表征能力更强的单词向量，提升模型分类性能。TextGraph-HN在大多数数据集
+上展现与TextGraph-CNN差不多的性能，只是在MR数据集上表现更差。两者的结合可以看出效果得到进一步提升。这是由于模型从局部特征以及
 全局特征进行了综合考量，从多个角度对文本进行分析，提升了整体的分类性能。
+
+\begin{figure*}[htb]
+    \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \includegraphics[width=1\textwidth]{pic/HisMR.png}
+    \caption{MR数据集ACC和F1-score}
+    \label{MR_acc_f1}
+    \end{minipage}
+    \quad
+    \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \includegraphics[width=1\textwidth]{pic/HisR52.png}
+    \caption{R52数据集ACC和F1-score}
+    \label{R52_acc_f1}
+    \end{minipage}
+\end{figure*}
+
+\begin{figure*}[htb]
+    \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \includegraphics[width=1\textwidth]{pic/HisR8.png}
+    \caption{R8数据集ACC和F1-score}
+    \label{R8_acc_f1}
+    \end{minipage}
+    \quad
+    \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \includegraphics[width=1\textwidth]{pic/HisYelp.png}
+    \caption{Yelp数据集ACC和F1-score}
+    \label{Yelp_acc_f1}
+    \end{minipage}
+\end{figure*}
 
 \subsection{训练集比例的影响}
 为了了解训练集大小对模型文本分类性能的影响，本章从R8的训练集中随机选取了2.5\%、5\%、7.5\%、10\%、12.5\%等不同百分比的样本作为
 训练集，其他的均作为测试集来评价训练模型分类性能。如图\ref{R8_acc}和图\ref{R8_f1-score}所示，展示了不同比例下的模型分类准确率和F1分数。
-从图上可以看出，textGraph即使在低比率的情况下依然高于所有对比方法。TextGraph在训练样本数为2.5\%的情况下获得91.9\%的准确率，
+从图上可以看出，TextGraph即使在低比率的情况下依然高于所有对比方法。TextGraph在训练样本数为2.5\%的情况下获得91.9\%的准确率，
 而大多数基线的准确率低于85\%，仅有同样采用了GCN模型的textGCN与本章提出的方法差距不大。此外，TextGraph的$F1$得分为74.71\%，而TextCNN的得分为36.82\%。
-这些结果表明，与textGCN采用了语料库中的信息类似，textGraph的文本图中的超节点能够捕获全局信息，以及语料库中的潜在信息——主要是通过
+这些结果表明，与textGCN采用了语料库中的信息类似，TextGraph的文本图中的超节点能够捕获全局信息，以及语料库中的潜在信息——主要是通过
 TF-IDF得到的，另一方面文本图的构造方式能够很好地反映短文本的结构，可以作为一些人为定义的潜在知识。这些信息的结合，使得模型在低比例训练集情况下依然
 能够展现较为良好的性能。
 
@@ -494,24 +527,24 @@ TF-IDF得到的，另一方面文本图的构造方式能够很好地反映短�
     \begin{minipage}[t]{0.5\linewidth}
     \centering
     \includegraphics[width=1\textwidth]{pic/R8_acc.pdf}
-    \caption{不同比例训练集下模型分类准确率（ACC）}
+    \caption{不同比例训练集分类ACC}
     \label{R8_acc}
     \end{minipage}
     \quad
     \begin{minipage}[t]{0.5\linewidth}
     \centering
     \includegraphics[width=1\textwidth]{pic/R8_f1-score.pdf}
-    \caption{不同比例训练集下模型分类F1分数（F1-score）}
+    \caption{不同比例训练集分类F1-score}
     \label{R8_f1-score}
     \end{minipage}
 \end{figure*}
 
 \subsection{文本向量可视化分析}
-为了更好的理解textGraph的分类性能，本章采用基于t-SNE的方法将不同模型生成的文本向量压缩至二维平面进行可视化观察。
+为了更好的理解TextGraph的分类性能，本章采用基于t-SNE的方法将不同模型生成的文本向量压缩至二维平面进行可视化观察。
 如图\ref{r8_embeding}所示，展示了采用LSTM模型进行训练的R8数据集的文本向量，该实验室采用5\%的比例训练集进行训练，
 然后对测试集上的数据进行可视化分析。图中的每一个点代表了一个文本向量压缩后的向量表示。相同的颜色代表这个文本属于
 同一个分类标签。从图中可以看出即使是同一类的样本，也未能完全聚集在一起，且明显成“条状”，与其他类型的样本交错在一起。
-在同一个类别簇下，也杂含了许多其他类别的样本，界限并不分明。如图\ref{R8_textGraph}所示，展示了采用textGraph模型经过
+在同一个类别簇下，也杂含了许多其他类别的样本，界限并不分明。如图\ref{R8_TextGraph}所示，展示了采用TextGraph模型经过
 同样比例训练集训练后的测试文本向量。相比于LSTM的方法，该模型生成的同一类别的向量表示更加紧凑，不同类别之间的界限更具分明。
 如LSTM模型生成的样本中，蓝色和橘色样本交织在一起，这样对于分类来说难以区分它们，而本章提出的模型，这两种类别区分明显
 仅有少量的样本交错，这样便有较高的区分度，使得模型分类准确率更高。
@@ -527,8 +560,8 @@ TF-IDF得到的，另一方面文本图的构造方式能够很好地反映短�
     \begin{minipage}[t]{0.5\linewidth}
     \centering
     \includegraphics[width=1\textwidth]{pic/R8-TextGraph.pdf}
-    \caption{textGraph模型的R8文本数据集可视化}
-    \label{R8_textGraph}
+    \caption{TextGraph模型的R8文本数据集可视化}
+    \label{R8_TextGraph}
     \end{minipage}
 \end{figure*}
 
