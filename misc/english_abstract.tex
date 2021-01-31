@@ -1,8 +1,31 @@
 
 \begin{englishabstract}
-	With the widespread engineering applications ranging from broadband signals and non-linear systems, time-domain integral equations (TDIE) methods for analyzing transient electromagnetic scattering problems are becoming widely used nowadays. TDIE-based marching-on-in-time (MOT) scheme and its fast algorithm are researched in this dissertation, including the numerical techniques of MOT scheme, late-time stability of MOT scheme, and two-level PWTD-enhanced MOT scheme. The contents are divided into four parts shown as follows.
-	
-	\englishkeyword{time-domain electromagnetic scattering, time-domain integral equation (TDIE), marching-on in-time (MOT) scheme, late-time instability, plane wave time-domain (PWTD) algorithm}
+	A large number of short text data are generated in real life. The generation of text data is inevitably accompanied by the classification. 
+	How to improve the classification efficiency and reduce the labor cost is the research direction of text classification.
+	In addition, there are many comments created by users about some aspects on meituan, Dianping and other websites. 
+	Mining users' emotions from these massive data helps to accurately depict users, thus assisting the platform to provide targeted services. 
+	However, most of the current methods ignore the relationship between words or between aspect words and context, which leads to poor classification performance. 
+
+	This paper mainly studies the text classification algorithm based on graph model, including whole-text classification and aspect-level sentiment analysis task. 
+	In order to improve the performance of the model, graph model combined with attention mechanism is used to mine the relationship between words, aspect words and text context. The main points of this thesis are summarized as follows：
+
+	\begin{itemize}
+		\item [1)] 
+		An algorithm for whole text classification is proposed. This method constructs a graph for each text with words as nodes and the relationship between words as edges. 
+		At the same time a hyper-node connected to all word nodes is established to represent the overall information of the text. 
+		Then a graph convolutional neural network with an attention mechanism is used to learn the vector representations of hyper-node and word nodes, and finally the information of the two vectors is merged to improve the accuracy of text classification.
+		\item [2)] 
+		An aspect-level sentiment analysis algorithm is proposed. First, this method converts the text into a graph, and then constructs a hyper-node that connects all the words in the aspect words. 
+		Learning word vector representation and hyper-node vector representation through graph convolutional neural network with attention mechanism and gating mechanism. 
+		Finally, the hyper-node vector is used as the aspect words vector to realize the classification task with the text word vectors. 
+		In addition, the BERT pre-training model is combined to further improve the classification performance
+	\end{itemize}
+
+	In general, the methods proposed in this article are based on graph model, using graph models to mine the relationship between text words and learn better word vector representations. 
+	In addition, the attention mechanism and gating mechanism are used to control the transfer process of node information in the graph model. 
+	Under the verification of a large number of data sets, the method proposed in this paper shows good performance.
+
+	\englishkeyword{text classification, graph model, vector representation, aspect words, attention mechanism}
 \end{englishabstract}
 
 

@@ -298,8 +298,7 @@ cls向量输入到一个全连接层实现分类任务。
 
 为了测试模型之间的性能，所有数据集均按照标准的划分方式划分为训练集和测试集，模型在训练集上进行训练，在测试集上进行验证。
 
-为验证模型参数的影响，实验中设置了不同大小的网络神经元个数进行方法的对比实验，分别设置了256,512,768个神经元个数。多头注意力机制的头数也会一定程度影响模型性能，因此本章也设置了不同个数的
-注意力头数进行对比。此外，本章算法中提出使用了一个特别的训练技巧，即数据扩充。因为训练样本有限，数据扩充能一定程度上使模型泛化能力更强，进而提升分类性能。
+为验证模型参数的影响，实验中设置了不同大小的网络神经元个数进行方法的对比实验，分别设置了64,128,256,512,768个神经元个数。此外，本章算法中提出使用了一个特别的训练技巧，即数据扩充。因为训练样本有限，数据扩充能一定程度上使模型泛化能力更强，进而提升分类性能。
 方面词本身并不包含情感色彩，而影响对方面词情感极性判断的决定性因素是文本中的其他词汇。因此方面词所处在的文本位置决定了这个方面词的情感。基于这种思想，该数据扩充方式的实现为，将一段文本
 中的方面词替换成另外一个文本中的方面词，保证替换后所处的文本位置不变。为验证这种思想的正确性，实验对比了采用数据扩充以及未使用数据扩充的模型。
 
@@ -364,21 +363,37 @@ DGEDT-BERT采用语法依赖解析树的方式进行文本构图，构图的效�
 \subsection{GAGCN中使用的GCN与普通GCN对比}
 GAGCN方法中使用的GCN包含了注意力机制以及一个门控机制，为对比这两个机制对模型性能的提升，本节实验与普通的未使用注意力机制和门控机制的GCN进行对比。这两个对比方法，均未
 使用BERT预训练模型，仅在GCN模型上有差异，即是否使用了注意力机制和门控机制，算法的其他部分一致——即采用了相同的文本处理方法、构图方式以及最终的向量融合方式和分类方法。
-\begin{figure*}[htb]
-    \begin{minipage}[t]{0.5\linewidth}
+% \begin{figure*}[htb]
+%     \begin{minipage}[t]{0.5\linewidth}
+%     \centering
+%     \includegraphics[width=1\textwidth]{pic/gcn-gagcnAcc.png}
+%     \caption{分类准确率（ACC）}
+%     \label{gcn_gagcn_acc}
+%     \end{minipage}
+%     \quad
+%     \begin{minipage}[t]{0.5\linewidth}
+%     \centering
+%     \includegraphics[width=1\textwidth]{pic/gcn-gagcnF1.png}
+%     \caption{分类F1分数（F1-score）}
+%     \label{gcn_gagcn_f1}
+%     \end{minipage}
+% \end{figure*}
+
+\begin{figure}[htb]
+    \setlength{\belowcaptionskip}{0pt}
     \centering
-    \includegraphics[width=1\textwidth]{pic/gcn-gagcnAcc.png}
+    \includegraphics[width=0.8\textwidth]{pic/gcn-gagcnAcc.png}
     \caption{分类准确率（ACC）}
     \label{gcn_gagcn_acc}
-    \end{minipage}
-    \quad
-    \begin{minipage}[t]{0.5\linewidth}
+\end{figure}
+
+\begin{figure}[htb]
+    \setlength{\belowcaptionskip}{0pt}
     \centering
-    \includegraphics[width=1\textwidth]{pic/gcn-gagcnF1.png}
+    \includegraphics[width=0.8\textwidth]{pic/gcn-gagcnF1.png}
     \caption{分类F1分数（F1-score）}
     \label{gcn_gagcn_f1}
-    \end{minipage}
-\end{figure*}
+\end{figure}
 
 如图\ref{gcn_gagcn_acc}所示，展示了GAGCN与普通GCN方法的准确率。从图可以看出，在所有的数据集的结果中，GAGCN都明显高于普通的GCN，尤其是在Rest15数据集上高出了3.14个百分点。
 说明GAGCN的注意力机制能够辅助模型找到对当前节点贡献度较高的邻居节点，并更多的获取来自这个邻居节点的信息，同时门控机制控制了当前层与上一层节点信息的选取，自适应选择机制可以
@@ -388,28 +403,74 @@ GAGCN方法中使用的GCN包含了注意力机制以及一个门控机制，为
 \subsection{数据增扩效果验证}
 本节对GAGCN-BERT中提出的数据增扩方法进行了验证。两种形式的参数设置一致，仅有的差异即是在训练过程中是否使用了数据增扩。数据增扩的实现以LAP数据集中的句子“it's color is even cool”为例，这里的
 方面词为“color”，在训练的过程中，这句话的方面词有50\%的几率被替换成另一个句子中的方面词，比如“service”，但标签依然维持不变。训练集中的所有句子均有50\%被替换成另一个方面词，而测试集不做替换。
-\begin{figure*}[htb]
-    \begin{minipage}[t]{0.5\linewidth}
+% \begin{figure*}[htb]
+%     \begin{minipage}[t]{0.5\linewidth}
+%     \centering
+%     \includegraphics[width=1\textwidth]{pic/DAACC.pdf}
+%     \caption{分类准确率（ACC）}
+%     \label{DAACC}
+%     \end{minipage}
+%     \quad
+%     \begin{minipage}[t]{0.5\linewidth}
+%     \centering
+%     \includegraphics[width=1\textwidth]{pic/DAF1.pdf}
+%     \caption{分类F1分数（F1-score）}
+%     \label{DAF1}
+%     \end{minipage}
+% \end{figure*}
+
+\begin{figure}[htb]
+    \setlength{\belowcaptionskip}{0pt}
     \centering
-    \includegraphics[width=1\textwidth]{pic/DAACC.pdf}
+    \includegraphics[width=0.6\textwidth]{pic/DAACC.pdf}
     \caption{分类准确率（ACC）}
     \label{DAACC}
-    \end{minipage}
-    \quad
-    \begin{minipage}[t]{0.5\linewidth}
+\end{figure}
+
+\begin{figure}[htb]
+    \setlength{\belowcaptionskip}{0pt}
     \centering
-    \includegraphics[width=1\textwidth]{pic/DAF1.pdf}
+    \includegraphics[width=0.6\textwidth]{pic/DAF1.pdf}
     \caption{分类F1分数（F1-score）}
     \label{DAF1}
-    \end{minipage}
-\end{figure*}
+\end{figure}
 
 如图\ref{DAACC}所示，展示了两种训练方式的分类准确率，从图中可以看出，使用了数据增扩的模型在这四种数据集上基本都高于未使用数据增扩的方法，尤其是在Rest15数据集上，提升了1.47\%。
-这可能是由于Rest15数据集相比于其他数据集训练样本更少，模型训练样本不足，容易产生过拟合，故采用数据增扩的方式补充一定量的训练样本，有利于提升模型的泛化能力，提升分类性能。如图\ref{DAF1}所示，
+这可能是由于Rest15数据集相比于其他数据集训练样本更少，模型训练样本不足，容易产生过拟合，故采用数据增扩的方式补充一定量的训练样本，有利于提升模型的泛化能力，提升分类性能。
+
+如图\ref{DAF1}所示，
 展示了F1-score的对比差异，与准确率结果类似，使用了数据增扩的方法分类性能优于未使用数据增扩的模型，并且在Rest15数据集上提升了10.1个百分点。差距十分明显。从准确率和F1分数的
 结果来看，本章提出的数据增扩方式对模型性能有一定提升，尤其是在仅有少量训练样本的数据集下表现突出。因为这种数据增扩的方式通过替换方面词，让模型学习过程中不过多依赖方面词本身的含义，而去
 捕捉语法信息，即方面词所处的上下文位置才是决定情感极性的关键。因此从某种角度上来看这种数据增扩方式一方面增加了训练样本，另一方面引入了人为定义的规则，即让模型不要过多关注于方面词的自身
 语义，而去关注于单词间的关系以及语法信息。
 
 \subsection{实验参数比较}
-本节比较了不同参数设置条件下模型的分类性能。
+本节比较了不同参数设置条件下模型的分类性能。如图\ref{paraunitacc}所示，比较了设置不同大小神经元个数的GAGCN-BERT模型。由于BERT模型采用的是预训练模型，故未更改BERT中每层网络的神经元个数，而是修改
+GAGCN-BERT中GCN每层网络中的神经元个数。
+
+\begin{figure}[htb]
+    \setlength{\belowcaptionskip}{0pt}
+    \centering
+    \includegraphics[width=0.6\textwidth]{pic/unitACC.pdf}
+    \caption{不同神经元个数比较}
+    \label{paraunitacc}
+\end{figure}
+
+\begin{figure}[htb]
+    \setlength{\belowcaptionskip}{0pt}
+    \centering
+    \includegraphics[width=0.6\textwidth]{pic/unitF1.pdf}
+    \caption{不同神经元个数比较}
+    \label{paraunitf1}
+\end{figure}
+
+从图\ref{paraunitacc}中结果来看，该模型的分类准确率对神经元个数不是特别敏感，整体的趋势是随着神经元个数的增加而增加。当神经元个数低于64时分类性能则表现最差，如在LAP数据集上
+相比效果最好的模型相差3.92个百分点。这是由于神经元个数非常低时，则所能容纳的信息量将会大幅压缩，从而导致产生的向量信息量较少，无法展现文本数据集
+内容信息，故低神经元个数情况下分类性能较差。整体来看，模型在512和768个神经元时表现相对最好。模型F1分数结果如图\ref{paraunitf1}所示。与准确率的趋势一致，整体情况是随着神经元个数的
+增加，模型性能也能得到提升。在64个神经元个数时效果最差。
+
+\section{本章小结}
+本章介绍了方面级情感分析算法，主要是基于图卷积神经网络以及对第三章算法的延续。建立一个超节点连接方面词中的所有单词，通过GCN网络中节点的信息传递，将方面词中的各个单词进行交互，同时随着
+网络层数的加深，也能将超节点的信息传递给文本其他单词，建立超节点与文本上下文中单词之间的联系。注意力机制与门控机制的应用保证节点之间信息的流动具有选择性，即当前节点着重关注于重要的邻居节点，
+并从这类节点中获取更多的信息。从结果来看，本章提出的方法在准确率和F1分数上均取得了不错的效果，相比于大多数对比方法均有提升，虽然在部分数据集上不如DGEDT(BiGCN)，但是差距细微，且相比之下本章
+提出的方法具有更高的计算效率。此外融入了BERT模型进一步提升模型性能，展现了不俗的分类性能。本章还提出了一种数据增扩方式，相比未使用该方法的模型，分类性能有一定的提升。
