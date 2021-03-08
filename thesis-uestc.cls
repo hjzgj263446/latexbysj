@@ -433,9 +433,8 @@
   \def\englishdegreename{Master}
   \def\chinesebooktitle{硕士学位论文}
   \def\englishbooktitle{Master Thesis}
-  \def\display@chineseheader{电子科技大学硕士学位论文}
-  \def\display@englishheader{Master Thesis of University of
-    Electronic Science and Technology of China}
+  \def\display@chineseheader{1}
+  \def\display@englishheader{1}
 }
 
 \DeclareOption{promaster}{

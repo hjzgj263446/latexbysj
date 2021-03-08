@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.12)  8 MAR 2021 15:09
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.12)  8 MAR 2021 16:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1068,41 +1068,8 @@ Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(e:/software_install/latex/texlive/texlive/2020/texmf-dist/tex/generic/stringenc/se-ascii-print.def
+(./misc/chinese_abstract.tex (e:/software_install/latex/texlive/texlive/2020/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
-)
-File: ./pic/logo.pdf Graphic file (type pdf)
-<use ./pic/logo.pdf>
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 18.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 18.
- (e:/software_install/latex/texlive/texlive/2020/texmf-dist/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 18.
- (e:/software_install/latex/texlive/texlive/2020/texmf-dist/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 18.
- (e:/software_install/latex/texlive/texlive/2020/texmf-dist/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 18.
- (e:/software_install/latex/texlive/texlive/2020/texmf-dist/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.5> on input line 18.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.34996> on input line 18.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5.25> on input line 18.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
- (e:/software_install/latex/texlive/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
- (e:/software_install/latex/texlive/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 Package fontspec Info: Could not resolve font "SimHei/BI" (it probably doesn't
@@ -1127,39 +1094,50 @@ Package fontspec Info: Font family 'SimHei(1)' created for font 'SimHei' with
 (fontspec)             <->"SimHei/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
- [1
-
-]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 18.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 18.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 18.
-
-Overfull \hbox (0.55862pt too wide) in paragraph at lines 18--18
-\TU/SimSun(0)/m/n/12 分 类 号     密 级     
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--18
-
- []
-
-[2] [3] (./misc/chinese_abstract.tex
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/sl' in size <12> not available
 (Font)              Font shape `TU/TimesNewRoman(0)/m/it' tried instead on input line 23.
  [1
 
+
 ] [2]) (./misc/english_abstract.tex [1
 
-] [2]) (./main_multifile.toc [3
+] [2]) (./main_multifile.toc
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 9.
+ (e:/software_install/latex/texlive/texlive/2020/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9.
+ (e:/software_install/latex/texlive/texlive/2020/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 9.
+ (e:/software_install/latex/texlive/texlive/2020/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 9.
+ (e:/software_install/latex/texlive/texlive/2020/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 9.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 9.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 9.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
+ (e:/software_install/latex/texlive/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
+ (e:/software_install/latex/texlive/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [3
 
-] [4])
+])
 \tf@toc=\write6
 \openout6 = `main_multifile.toc'.
 
- (./chapter/c1_exordium.tex [5] [6]
+ (./chapter/c1_exordium.tex [4]
 Chapter 第一章.
 [1
 
@@ -1255,7 +1233,15 @@ Missing character: There is no ） in font rm-lmr12!
  [25] [26]
 File: pic/cnnslide.png Graphic file (type bmp)
 <pic/cnnslide.png>
- [27] [28] [29] [30] [31] [32] [33] [34] [35] [36]
+ [27] [28] [29]
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 240.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.5> on input line 240.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7.34996> on input line 240.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5.25> on input line 240.
+ [30] [31] [32] [33] [34] [35] [36]
 File: pic/HisMR.png Graphic file (type bmp)
 <pic/HisMR.png>
 
@@ -1468,31 +1454,27 @@ Overfull \hbox (14.0pt too wide) in paragraph at lines 563--576
 Chapter 第五章.
 [59
 
-] [60]) (./misc/acknowledgement.tex [61]) (./main_multifile.bbl [62
-
-] [63
+] [60]) (./misc/acknowledgement.tex) (./main_multifile.bbl [61] [62
 
 ]
 Underfull \hbox (badness 7613) in paragraph at lines 57--59
 []\TU/TimesNewRoman(0)/m/n/10.5 Y. Kim. Convolutional neural networks for sentence classification[J]. arXiv preprint
  []
 
-[64]
+[63]
 Underfull \hbox (badness 1406) in paragraph at lines 103--108
 \TU/TimesNewRoman(0)/m/n/10.5 attention neural networks[C]. International Conference on Social Computing, Behavioral-
  []
 
-[65] [66]) (./accomplish.bbl [67])
+[64] [65])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 61.
- [68
-
-]
+ [66]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
  (./main_multifile.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 61.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 61.
 Package rerunfilecheck Info: File `main_multifile.out' has not changed.
-(rerunfilecheck)             Checksum: 2F8001C83A7A30B70114FE9F827182D3;5327.
+(rerunfilecheck)             Checksum: 00BA1A5890449952CA93A93A43AC0239;5165.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1502,12 +1484,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 26058 strings out of 479418
- 498444 string characters out of 5874465
- 895033 words of memory out of 5000000
- 42920 multiletter control sequences out of 15000+600000
- 601882 words of font info for 169 fonts, out of 8000000 for 9000
+ 25996 strings out of 479418
+ 495979 string characters out of 5874465
+ 894522 words of memory out of 5000000
+ 42874 multiletter control sequences out of 15000+600000
+ 601794 words of font info for 158 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 59i,17n,88p,1071b,548s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,17n,88p,1071b,550s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main_multifile.xdv (79 pages, 1251256 bytes).
+Output written on main_multifile.xdv (72 pages, 1212088 bytes).
