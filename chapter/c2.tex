@@ -1,5 +1,5 @@
 \chapter{相关理论及技术}
-本章首先对文本分类任务进行简单介绍以及单词嵌入表示如word2vec，glove等学习方式。本章主要围绕了基于图模型文本分类模型的相关理论以及关键技术。包括图模型，图卷积神经网络（GCN），注意力机制，以及本文将会使用的技术和深度学习模型如TF-IDF、门控机制、CNN、Bert等。
+本章首先对文本分类任务进行简单介绍以及简述了单词嵌入表示如word2vec，GloVe等学习方式。本章主要围绕了基于图模型的文本分类算法的相关理论以及关键技术。包括图模型，图卷积神经网络（GCN），注意力机制，以及本文将会使用的技术和深度学习模型如TF-IDF、门控机制、CNN、BERT等。
 \section{文本分类任务}
 在如今人类活动中产生了大量的文本数据，如美团、大众点评上对美食的各类评论，豆瓣上对书籍、电影的评价，以及人类历史活动中各类简短信息，例如微博、推特，新闻摘要等。这类都是一些短文本，对这类短文本进行分析一方面有助于实现快速归类，对于不同类型的文本内容进行整理；
 另一方面针对用户的平均分析用户行为，改善服务。文本分类涉及多种情况，本文主要探讨整体文本分类算法以及方面级情感分析算法。
@@ -31,8 +31,8 @@
 	\label{semeval14datasets}
 \end{figure}
 
-从图\ref{semeval14datasets}可以看出，该段文本共有三个由红色方框标注出来的方面目标词，分别是‘bar’、‘table’、‘dinner’。
-方面级情感分析任务就是需要实现分别对这三个词的情感进行分析，而不是对整个文本进行分类。因此相比于整体文本分类任务来说，需要更精细的设计。比如‘bar’这个词，从文本描述来看，最能体现这个词语情感信息的词应该是‘enjoying’，而‘enjoying’代表了正面的情感，因此对于‘bar’这个方面目标词把它归于‘正面情感’这个标签；对于‘table’和‘dinner’，这句话没有明显的情感，仅仅作为描述语句或是补充，因此没有特别的情感色彩，把它们归属于‘无情感’的标签下。所以，对于方面级情感分析任务来说，需要根据方面目标词进行分析，把握该词汇与其他具有情感色彩的词汇之间的关系，分析具体的情感色彩指代。
+从图\ref{semeval14datasets}可以看出，该段文本共有三个由红色方框标注出来的方面目标词，分别是“bar”、“table”、“dinner”。
+方面级情感分析任务就是需要实现分别对这三个词的情感进行分析，而不是对整个文本进行分类。因此相比于整体文本分类任务来说，需要更精细的设计。比如“bar”这个词，从文本描述来看，最能体现这个词语情感信息的词应该是“enjoying”，而“enjoying”代表了正面的情感，因此对于“bar”这个方面目标词把它归于“正面情感”这个标签；对于“table”和“dinner”，这句话没有明显的情感，仅仅作为描述语句或是补充，因此没有特别的情感色彩，把它们归属于“无情感”的标签下。所以，对于方面级情感分析任务来说，需要根据方面目标词进行分析，把握该词汇与其他具有情感色彩的词汇之间的关系，分析具体的情感色彩指代。
 同一个句子中可能存在多个情感色彩词，并且词的含义可能是相反的，一个可能代表了积极正面的情感，另一个可能是消极的负面情感。相比于整体文本分类任务来说，更具有难度。
 \section{单词嵌入表示}
 文本数据不同于一般的图像、音频等数据。图像数据本身就具有意义，是天然带有的属性，即使没有经过训练的生物或许也能分辨不同的图片。而文本数据是人类的高层的抽象的思维信息表达的工具，具有高度抽象特征。在图像处理中，一张图片通常可以用一个矩阵表示，其中每个坐标的点即为像素点的值，矩阵中每个数值都具有一定意义，且矩阵属于稠密矩阵。而一段文本通常有多个单词构成，每个单词可以由一个向量表示，如图\ref{textEmb}所示。
@@ -46,7 +46,7 @@
 
 如图\ref{textEmb}所示，一句话由多个向量组成，每个单词有一个向量表示，不同于图片矩阵，向量中的每个单一的值没有具体的含义，所有的值构成一个向量才具有表示为单词信息的含义。向量中的值一般取决于表示的方法。如采用one-hot的表示方式，向量中仅含有一个为1的值，其他值为0。向量的维度由单词个数决定，如一个单词量为2000的词库，构成的单词向量即为1*2000的向量。如单词Dream位于该词库中第二个位置，它的向量表示可能是（0,1,0,0,…,0），另一个单词Have可能位于第1000个位置，那么它的向量表示可能就是（0,0,…,1,…,0,0）。每个单词都由一个唯一的向量表示。虽然这种方式非常简单，但同时带来许多问题。1.向量维度随着单词数量而增加，当面对几万甚至几十万的词库时显得力不从心。2.每个单词向量都仅仅由0,1构成，没有具体含义，难以把握单词之间的联系。
 
-Hinton提出的Distributed Representation\citing{hinton1986learning}思想可以用以学习词向量解决这个问题。这类词向量的表示一般类似于（0.22,-0.17,…,0.65,0.01）这种。而现如今常用的学习词向量的方法有word2vec，glove等。
+Hinton提出的Distributed Representation\citing{hinton1986learning}思想可以用以学习词向量解决这个问题。这类词向量的表示一般类似于（0.22,-0.17,…,0.65,0.01）这种。而现如今常用的学习词向量的方法有word2vec，GloVe等。
 
 Word2vec它采用了一个两层神经网络的基础架构，采用CBOW或是Skip-gram的模型训练文本单词，挖掘单词语义，将单词嵌入到一个高维的向量表示空间，最终获得每一个单词的一个向量表示。
 \begin{figure}[htb]%\small tbp
@@ -81,12 +81,12 @@ CBOW模型如图\ref{CBOW}所示，图左为COBW模型架构，它与skip-gram�
 	h_t=\frac{1}{C}W\sum_{i=1}^{c}x_i
 \end{equation}
 
-Glove方法也是一种学习单词表示的方法。他与word2vec类似，采用一个大型的语料库进行训练，将单词嵌入到高维空间，实现用一组向量表示单词。但是word2vec的CBOW和skip-gram方法是基于局部上下文窗口的，忽略了单词之间的共现信息。Glove方法的提出，考虑了这种全局词汇的共现信息，并且结合局部上下文窗口的方法的优点，来学习词向量，相比word2vec效果得到了一定的提升。
-Glove目标函数可以近似为：
+GloVe方法也是一种学习单词表示的方法。他与word2vec类似，采用一个大型的语料库进行训练，将单词嵌入到高维空间，实现用一组向量表示单词。但是word2vec的CBOW和skip-gram方法是基于局部上下文窗口的，忽略了单词之间的共现信息。Glove方法的提出，考虑了这种全局词汇的共现信息，并且结合局部上下文窗口的方法的优点，来学习词向量，相比word2vec效果得到了一定的提升。
+GloVe目标函数可以近似为：
 \begin{equation}\label{CBOWFormula1}
 	F\left(w_i-w_j,w_k\right)=\frac{p_{ik}}{p_{jk}}
 \end{equation}
-其中$w_i$,$w_j$,$w_k$分别代表单词i,j,k的表示向量，$p_{ik}$代表单词k出现在单词i上下文的概率。Glove的目标就是找到函数F的表示空间，从而得到所有单词的向量表示。
+其中$w_i$,$w_j$,$w_k$分别代表单词i,j,k的表示向量，$p_{ik}$代表单词k出现在单词i上下文的概率。GloVe的目标就是找到函数F的表示空间，从而得到所有单词的向量表示。
 \section{图模型相关理论}
 现实生活中存在着大量的图结构数据，比如分子结构，社交网络，地理位置。这些数据的关键点在于都有一个可抽象化的节点，比如社交网络中的用户，以及连接这些节点的边即关系，比如社交网络中用户的关注、用户的点赞评论等交互。如何去利用这些图数据那就首先需要获取这些图数据中节点或是边的有效表示\citing{hamilton2017representation}。现如今已有大量关于图模型数据处理的研究\citing{scarselli2008graph,battaglia2016interaction,zhang2018end}。
 
@@ -188,7 +188,7 @@ Vaswani\citing{vaswani2017attention}采用公式\ref{scoreFormula3}的计算方�
 	\label{self-att}
 \end{figure}
 自注意力机制是一种关联单个序列的不同位置的注意力机制。通过计算每个位置与其他所有位置上的信息的注意力权重，从而获取得到对于当前位置最重要的一些信息，同时也能保留那些不重要的信息，更新当前位置的向量表示
-。如图\ref{self-att}所示，单词‘touch’会计算所有其他单词的之间的注意力分数，分数大小由线段粗细为例，‘touch’可能更加关注于‘inner self’等单词，因此分配的权重也会更高，对于其他
+。如图\ref{self-att}所示，单词“touch”会计算所有其他单词的之间的注意力分数，分数大小由线段粗细为例，“touch”可能更加关注于“inner self”等单词，因此分配的权重也会更高，对于其他
 单词分配的权重会低一些。Lin\citing{lin2017structured}采用注意力机制提出一个可解释性的文本嵌入模型，用于情感分析等任务上取得优异的结果。
 \begin{figure}[htb]%\small tbp
 	\setlength{\belowcaptionskip}{0pt}
@@ -199,7 +199,7 @@ Vaswani\citing{vaswani2017attention}采用公式\ref{scoreFormula3}的计算方�
 \end{figure}
 
 多头注意力机制首次由Vaswani\citing{vaswani2017attention}等人提出。首先将Query，Key，Value进行线性变换
-，这里将计算多个线性变换，每个线性变换的参数均不一样。每一次的计算就是所谓的一个‘头’。然后采用放缩点积（scaled dot-Product attention）
+，这里将计算多个线性变换，每个线性变换的参数均不一样。每一次的计算就是所谓的一个“头”。然后采用放缩点积（scaled dot-Product attention）
 方式计算，如公式\ref{scoreFormula3}所示。最后将结果拼接通过再通过一个线性变换层输出得到。如图\ref{muti-att}所示。
 这样的好处就是可以允许模型在不同的表示子空间里学习到不同的相关信息。
 \section{其他相关技术模型}
@@ -241,19 +241,19 @@ CNN主要应用于视频、图像等领域，由Kim等人\citing{kim2014convolut
 LSTM、GRU网络中采用了门控机制，实现了对短期记忆与长期记忆的结合，提升了模型性能，并且一定程度上解决了RNN模型的梯度消失问题。
 如图\ref{lstm}所示，LSTM模型采用了门结构，门就是一个选择信息通过或抛弃的机制。计算过程如下：
 \begin{equation}\label{LSTMFormula1}
-	f_t=\sigma(W_f\bullet\left[h_{t-1},x_t\right]+b_f)
+	f_t=\sigma(W_f\cdot\left[h_{t-1},x_t\right]+b_f)
 \end{equation}
 \begin{equation}\label{LSTMFormula2}
-	i_t=\sigma\left(W_i\bullet\left[h_{t-1},x_t\right]+b_i\right)
+	i_t=\sigma\left(W_i\cdot\left[h_{t-1},x_t\right]+b_i\right)
 \end{equation}
 \begin{equation}\label{LSTMFormula3}
-	\widetilde{C_t}=tanh\left(W_c\bullet\left[h_{t-1},x_t\right]+b_c\right)
+	\widetilde{C_t}=tanh\left(W_c\cdot\left[h_{t-1},x_t\right]+b_c\right)
 \end{equation}
 \begin{equation}\label{LSTMFormula4}
 	C_t=f_t\ast C_{t-1}+i_t\ast \widetilde{C_t}
 \end{equation}
 \begin{equation}\label{LSTMFormula5}
-	o_t=\sigma\left(W_o\bullet\left[h_{t-1},x_t\right]+b_o\right)
+	o_t=\sigma\left(W_o\cdot\left[h_{t-1},x_t\right]+b_o\right)
 \end{equation}
 \begin{equation}\label{LSTMFormula6}
 	h_t=o_t\ast tanh\left(C_t\right)
@@ -269,8 +269,8 @@ BERT\citing{devlin2018bert}模型是基于transformer模型\citing{vaswani2017at
 	\caption{BERT模型基础架构}
 	\label{bert}
 \end{figure}
-自然语言处理领域的预训练模型。如图\ref{bert}所示，bert主要结构采用了transformer的encoder部分，如图左所示。在每一个encoder结构中，
+自然语言处理领域的预训练模型。如图\ref{bert}所示，BERT主要结构采用了transformer的encoder部分，如图左所示。在每一个encoder结构中，
 文本单词向量首先经过一个多头注意力机制以及一个残差连接的标准化层（add \& norm），之后在经过
-线性转化和又一个标准化层，将结果输入到下一层网络。如图右所示，bert中由多个这样的encoder结构组成。
+线性转化和又一个标准化层，将结果输入到下一层网络。如图右所示，BERT中由多个这样的encoder结构组成。
 BERT预训练过程主要是随机遮盖或替换一句话里面任意字或词，然后让模型通过上下文的理解预测那一个被遮盖或替换的部分。
 

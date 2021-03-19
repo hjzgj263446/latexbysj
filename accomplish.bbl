@@ -1,6 +1,9 @@
 \begin{thebibliography}{\bstlabelmark}
 \interlinepenalty=10000
 \setlength{\itemsep}{0bp}\setlength{\parskip}{0pt}\small
-\bibitem{tjj} Y.~Li, D.~Tarlow, M.~Brockschmidt, et~al. Gated graph sequence
-  neural networks[J]. arXiv preprint arXiv:1511.05493, 2015
+\bibitem{hahaha} 电子科技大学.
+  基于gcn孪生网络的跨语言知识图谱实体对齐方法[P]. 中国,
+  发明型专利, 201910676206.9, 2019
+\bibitem{tjj1} 轨迹大数据挖掘算法研究，No.2020YFG0053
+\bibitem{tjj2} 技术项目委托，No.200634
 \end{thebibliography}

@@ -17,8 +17,8 @@
 \contentsline {section}{\numberline {1.2}国内外研究现状}{2}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}图网络模型算法研究}{2}{subsection.1.2.1}%
  \cftsetpnumwidth {\widthof {3}-1pt} 
-\contentsline {subsection}{\numberline {1.2.2}文本分类算法研究}{3}{subsection.1.2.2}%
  \cftsetpnumwidth {\widthof {4}-1pt} 
+\contentsline {subsection}{\numberline {1.2.2}文本分类算法研究}{4}{subsection.1.2.2}%
 \contentsline {subsubsection}{\numberline {1.2.2.1}整体文本分类算法研究现状}{4}{subsubsection.1.2.2.1}%
  \cftsetpnumwidth {\widthof {5}-1pt} 
 \contentsline {subsubsection}{\numberline {1.2.2.2}方面级情感分类算法研究现状}{5}{subsubsection.1.2.2.2}%
