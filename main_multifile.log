@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.12)  19 MAR 2021 17:06
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.12)  21 MAR 2021 16:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1191,9 +1191,26 @@ File: pic/2-7.jpg Graphic file (type bmp)
 File: pic/2-8.jpg Graphic file (type bmp)
 <pic/2-8.jpg>
  [13]
-File: pic/2-9.png Graphic file (type bmp)
-<pic/2-9.png>
- [14]
+File: pic/11.png Graphic file (type bmp)
+<pic/11.png>
+
+Overfull \hbox (85.69785pt too wide) in paragraph at lines 141--141
+[] [] 
+ []
+
+File: pic/22.png Graphic file (type bmp)
+<pic/22.png>
+
+Overfull \hbox (85.69785pt too wide) in paragraph at lines 148--148
+[] [] 
+ []
+
+
+Overfull \hbox (14.0pt too wide) in paragraph at lines 138--151
+[][]  [] 
+ []
+
+[14]
 File: pic/2-10.png Graphic file (type bmp)
 <pic/2-10.png>
  [15] [16]
@@ -1348,30 +1365,34 @@ File: pic/asgraph.png Graphic file (type bmp)
 <pic/asgraph.png>
 File: pic/asgraphart.png Graphic file (type bmp)
 <pic/asgraphart.png>
- [42] [43]
+ [42]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[43]
 File: pic/attgcn.png Graphic file (type bmp)
 <pic/attgcn.png>
  [44]
-LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 103.
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 125.
  (e:/software_install/latex/texlive/texlive/2020/texmf-dist/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [45] [46] [47] [48] [49] [50] [51]
 File: pic/gcnacc.png Graphic file (type bmp)
 <pic/gcnacc.png>
 
-Overfull \hbox (85.69785pt too wide) in paragraph at lines 356--356
+Overfull \hbox (85.69785pt too wide) in paragraph at lines 378--378
 [] [] 
  []
 
 File: pic/gcnf1.png Graphic file (type bmp)
 <pic/gcnf1.png>
 
-Overfull \hbox (85.69785pt too wide) in paragraph at lines 363--363
+Overfull \hbox (85.69785pt too wide) in paragraph at lines 385--385
 [] [] 
  []
 
 
-Overfull \hbox (14.0pt too wide) in paragraph at lines 353--366
+Overfull \hbox (14.0pt too wide) in paragraph at lines 375--388
 [][]  [] 
  []
 
@@ -1379,112 +1400,113 @@ Overfull \hbox (14.0pt too wide) in paragraph at lines 353--366
 File: pic/BERTACC.png Graphic file (type bmp)
 <pic/BERTACC.png>
 
-Overfull \hbox (85.69785pt too wide) in paragraph at lines 377--377
+Overfull \hbox (85.69785pt too wide) in paragraph at lines 399--399
 [] [] 
  []
 
 File: pic/BERTF1.png Graphic file (type bmp)
 <pic/BERTF1.png>
 
-Overfull \hbox (85.69785pt too wide) in paragraph at lines 384--384
+Overfull \hbox (85.69785pt too wide) in paragraph at lines 406--406
 [] [] 
  []
 
 
-Overfull \hbox (14.0pt too wide) in paragraph at lines 374--387
+Overfull \hbox (14.0pt too wide) in paragraph at lines 396--409
 [][]  [] 
  []
 
+[53]
 File: pic/gcn-gagcnAcc.png Graphic file (type bmp)
 <pic/gcn-gagcnAcc.png>
 
-Overfull \hbox (85.69785pt too wide) in paragraph at lines 402--402
+Overfull \hbox (85.69785pt too wide) in paragraph at lines 424--424
 [] [] 
  []
 
 File: pic/gcn-gagcnF1.png Graphic file (type bmp)
 <pic/gcn-gagcnF1.png>
 
-Overfull \hbox (85.69785pt too wide) in paragraph at lines 409--409
+Overfull \hbox (85.69785pt too wide) in paragraph at lines 431--431
 [] [] 
  []
 
 
-Overfull \hbox (14.0pt too wide) in paragraph at lines 399--412
+Overfull \hbox (14.0pt too wide) in paragraph at lines 421--434
 [][]  [] 
  []
 
-[53]
 File: pic/att3_1.png Graphic file (type bmp)
 <pic/att3_1.png>
+[54]
 File: pic/att3_2.png Graphic file (type bmp)
 <pic/att3_2.png>
- [54]
+ [55]
 File: pic/att4_1.png Graphic file (type bmp)
 <pic/att4_1.png>
 File: pic/att4_2.png Graphic file (type bmp)
 <pic/att4_2.png>
- [55]
+ [56]
 File: pic/DAACC.pdf Graphic file (type pdf)
 <use pic/DAACC.pdf>
 
-Overfull \hbox (85.69785pt too wide) in paragraph at lines 521--521
+Overfull \hbox (85.69785pt too wide) in paragraph at lines 543--543
 [] [] 
  []
 
 File: pic/DAF1.pdf Graphic file (type pdf)
 <use pic/DAF1.pdf>
 
-Overfull \hbox (85.69785pt too wide) in paragraph at lines 528--528
+Overfull \hbox (85.69785pt too wide) in paragraph at lines 550--550
 [] [] 
  []
 
 
-Overfull \hbox (14.0pt too wide) in paragraph at lines 518--531
+Overfull \hbox (14.0pt too wide) in paragraph at lines 540--553
 [][]  [] 
  []
 
-[56]
+[57]
 File: pic/unitACC.pdf Graphic file (type pdf)
 <use pic/unitACC.pdf>
 
-Overfull \hbox (85.69785pt too wide) in paragraph at lines 566--566
+Overfull \hbox (85.69785pt too wide) in paragraph at lines 588--588
 [] [] 
  []
 
 File: pic/unitF1.pdf Graphic file (type pdf)
 <use pic/unitF1.pdf>
 
-Overfull \hbox (85.69785pt too wide) in paragraph at lines 573--573
+Overfull \hbox (85.69785pt too wide) in paragraph at lines 595--595
 [] [] 
  []
 
 
-Overfull \hbox (14.0pt too wide) in paragraph at lines 563--576
+Overfull \hbox (14.0pt too wide) in paragraph at lines 585--598
 [][]  [] 
  []
 
-[57]) (./chapter/c5.tex [58]
+) (./chapter/c5.tex [58] [59]
 Chapter 第五章.
-[59
+[60
 
-] [60]) (./misc/acknowledgement.tex [61]) (./main_multifile.bbl [62
+] [61]) (./misc/acknowledgement.tex [62]) (./main_multifile.bbl [63
 
-] [63
+] [64
 
 ]
 Underfull \hbox (badness 7613) in paragraph at lines 57--59
 []\TU/TimesNewRoman(0)/m/n/10.5 Y. Kim. Convolutional neural networks for sentence classification[J]. arXiv preprint
  []
 
-[64]
+[65]
 Underfull \hbox (badness 1406) in paragraph at lines 103--108
 \TU/TimesNewRoman(0)/m/n/10.5 attention neural networks[C]. International Conference on Social Computing, Behavioral-
  []
 
-[65] [66]) (./accomplish.bbl [67])
+[66] [67]) (./accomplish.bbl [68])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 60.
- [68
+ [69
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 60.
@@ -1492,7 +1514,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 60.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 60.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 60.
 Package rerunfilecheck Info: File `main_multifile.out' has not changed.
-(rerunfilecheck)             Checksum: 2F8001C83A7A30B70114FE9F827182D3;5327.
+(rerunfilecheck)             Checksum: 015A8280503732FC938FD4C6C05F86B0;5327.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1502,12 +1524,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 26026 strings out of 479418
- 496335 string characters out of 5874465
- 892090 words of memory out of 5000000
- 42888 multiletter control sequences out of 15000+600000
- 601882 words of font info for 169 fonts, out of 8000000 for 9000
+ 26059 strings out of 479418
+ 497855 string characters out of 5874465
+ 893167 words of memory out of 5000000
+ 42919 multiletter control sequences out of 15000+600000
+ 601890 words of font info for 170 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 59i,17n,88p,1071b,548s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,17n,88p,1071b,594s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main_multifile.xdv (79 pages, 1253448 bytes).
+Output written on main_multifile.xdv (80 pages, 1260192 bytes).

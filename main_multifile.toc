@@ -101,16 +101,16 @@
 \contentsline {section}{\numberline {4.3}算法模型设计}{42}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}模型总览}{42}{subsection.4.3.1}%
  \cftsetpnumwidth {\widthof {43}-1pt} 
-\contentsline {subsection}{\numberline {4.3.2}文本图建模过程}{43}{subsection.4.3.2}%
  \cftsetpnumwidth {\widthof {44}-1pt} 
+\contentsline {subsection}{\numberline {4.3.2}文本图建模过程}{44}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}词向量与超节点向量表示学习}{44}{subsection.4.3.3}%
  \cftsetpnumwidth {\widthof {45}-1pt} 
  \cftsetpnumwidth {\widthof {46}-1pt} 
  \cftsetpnumwidth {\widthof {47}-1pt} 
 \contentsline {subsection}{\numberline {4.3.4}向量融合及分类}{47}{subsection.4.3.4}%
-\contentsline {section}{\numberline {4.4}实验设置}{47}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}数据集描述及数据处理}{47}{subsection.4.4.1}%
  \cftsetpnumwidth {\widthof {48}-1pt} 
+\contentsline {section}{\numberline {4.4}实验设置}{48}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}数据集描述及数据处理}{48}{subsection.4.4.1}%
  \cftsetpnumwidth {\widthof {49}-1pt} 
 \contentsline {subsection}{\numberline {4.4.2}对比方法介绍}{49}{subsection.4.4.2}%
  \cftsetpnumwidth {\widthof {50}-1pt} 
@@ -120,29 +120,30 @@
 \contentsline {subsection}{\numberline {4.5.1}模型分类性能分析}{51}{subsection.4.5.1}%
  \cftsetpnumwidth {\widthof {52}-1pt} 
  \cftsetpnumwidth {\widthof {53}-1pt} 
-\contentsline {subsection}{\numberline {4.5.2}GAGCN中使用的GCN与普通GCN对比}{53}{subsection.4.5.2}%
  \cftsetpnumwidth {\widthof {54}-1pt} 
+\contentsline {subsection}{\numberline {4.5.2}GAGCN中使用的GCN与普通GCN对比}{54}{subsection.4.5.2}%
  \cftsetpnumwidth {\widthof {55}-1pt} 
  \cftsetpnumwidth {\widthof {56}-1pt} 
-\contentsline {subsection}{\numberline {4.5.3}数据增扩效果验证}{56}{subsection.4.5.3}%
  \cftsetpnumwidth {\widthof {57}-1pt} 
-\contentsline {subsection}{\numberline {4.5.4}实验参数比较}{57}{subsection.4.5.4}%
+\contentsline {subsection}{\numberline {4.5.3}数据增扩效果验证}{57}{subsection.4.5.3}%
  \cftsetpnumwidth {\widthof {58}-1pt} 
+\contentsline {subsection}{\numberline {4.5.4}实验参数比较}{58}{subsection.4.5.4}%
 \contentsline {section}{\numberline {4.6}本章小结}{58}{section.4.6}%
  \cftsetpnumwidth {\widthof {59}-1pt} 
-\contentsline {chapter}{\numberline {第五章}总结与展望}{59}{chapter.5}%
-\contentsline {section}{\numberline {5.1}本文工作总结}{59}{section.5.1}%
  \cftsetpnumwidth {\widthof {60}-1pt} 
-\contentsline {section}{\numberline {5.2}未来工作展望}{60}{section.5.2}%
+\contentsline {chapter}{\numberline {第五章}总结与展望}{60}{chapter.5}%
+\contentsline {section}{\numberline {5.1}本文工作总结}{60}{section.5.1}%
  \cftsetpnumwidth {\widthof {61}-1pt} 
-\setcounter {tocdepth}{0}
+\contentsline {section}{\numberline {5.2}未来工作展望}{61}{section.5.2}%
  \cftsetpnumwidth {\widthof {62}-1pt} 
-\contentsline {chapter}{致\hspace {12pt}谢}{62}{chapter*.46}%
+\setcounter {tocdepth}{0}
  \cftsetpnumwidth {\widthof {63}-1pt} 
-\contentsline {chapter}{参考文献}{63}{chapter*.47}%
+\contentsline {chapter}{致\hspace {12pt}谢}{63}{chapter*.47}%
  \cftsetpnumwidth {\widthof {64}-1pt} 
+\contentsline {chapter}{参考文献}{64}{chapter*.48}%
  \cftsetpnumwidth {\widthof {65}-1pt} 
  \cftsetpnumwidth {\widthof {66}-1pt} 
  \cftsetpnumwidth {\widthof {67}-1pt} 
  \cftsetpnumwidth {\widthof {68}-1pt} 
-\contentsline {chapter}{攻读硕士{}学位期间取得的成果}{68}{chapter*.48}%
+ \cftsetpnumwidth {\widthof {69}-1pt} 
+\contentsline {chapter}{攻读硕士{}学位期间取得的成果}{69}{chapter*.49}%

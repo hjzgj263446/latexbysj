@@ -59,7 +59,7 @@ Wang等人\citing{wang2016attention}提出了一个基于LSTM的注意力机制�
 该步骤主要是将文本中的单词采用第三章提到的构图方法构建成图，其次构造一个传递方面词信息的超节点。第二部分主要是单词词向量表示学习以及超节点的表示学习，这部分采用基于多头注意力机制的GCN
 进行学习以及一个门控机制用以控制图网络模型中每一层信息的传递。第三部分是基于第二部分学到的文本词向量以及超节点向量来计算。将超节点向量作为注意力机制中的Query向量，
 计算文本单词中所有单词的权重，权重的大小即可视作这个单词对方面词情感的分析的重要程度。随后将注意力机制获得向量与超节点向量进行一个简单地结合，即得到最终的分类向量，将这个向量输入一个简单的
-神经网络通过softmax激活函数实现情感分析任务。以下几节将对这些部分进行详细介绍。
+神经网络通过softmax激活函数实现情感分析任务。该模型训练过程如\ref{training_process}所示。以下几节将对这些部分进行详细介绍。
 \begin{figure}[htb]
 	\setlength{\belowcaptionskip}{0pt}
 	\centering
@@ -67,6 +67,28 @@ Wang等人\citing{wang2016attention}提出了一个基于LSTM的注意力机制�
 	\caption{方面级情感分析算法模型}
 	\label{asgraphart}
 \end{figure}
+
+\begin{algorithm}[!h]
+	\SetAlgoLined
+	\DontPrintSemicolon
+    \KwIn{文本数据集}
+    \KwOut{模型参数}
+    $\text{随机初始化参数}$\;
+    $\text{初始化Adam优化器}$\;
+    $\text{初始化训练集}D_{train}$\;
+    \ForEach{$ epoch \in [1,\dots,N] $}
+	{
+        $\text{将每一个文本$t_i$ }\in D_{train} \text{构建为图$g_i$}$\\
+        $\text{结合注意力机制和门控机制的GCN网络学习图$g_i$中每个单词节点向量}$\\
+        $\text{通过注意力机制获取得到分类向量$O_i$}$\\
+        $\text{利用损失函数计算误差}$\\
+        $\text{将误差反向传递，并利用Adam优化器最小化误差}$\\
+    }
+    \caption{模型训练过程}
+    \label{training_process}
+\end{algorithm}
+
+
 
 \subsection{文本图建模过程}
 本章文本图的构建过程与第三章图构建过程一致，均是采用滑动窗口的方式构建单词与单词之间的图。但与第三章略有不同，第三章中每个单词在图中仅有一个节点，即使一个单词在同一个文本中只出现了一次，
@@ -168,7 +190,7 @@ $h_t$即为每一层GCN的输出，经过最后一层GCN网络，将会得到一
 \end{equation}
 
 \begin{equation}\label{a2}
-    \alpha_i = \frac{a_i}{\sum_{j}exp(a_j)}
+    \alpha_i = \frac{exp(a_i)}{\sum_{j}exp(a_j)}
 \end{equation}
 
 \begin{equation}\label{a3}
